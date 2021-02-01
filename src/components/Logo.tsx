@@ -1,11 +1,26 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledHeading = styled.h1`
+  text-align: right;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 0em 0.5em;
+`;
+
+const Link = styled.a`
+  text-decoration: none;
+  font-family: "Exo 2", sans-serif;
+`;
 
 export default function Logo(): JSX.Element {
   return (
-    <h1>
-      Ashley Elena
-      <br />
-      Giamona
-    </h1>
+    <StyledHeading>
+      <Link href="/">
+        Ashley Elena
+        <br />
+        Giamona
+      </Link>
+    </StyledHeading>
   );
 }

@@ -1,13 +1,24 @@
 import { createGlobalStyle } from "styled-components";
+import BackgroundImage from "../assets/milky_way_bg.jpg";
 
 export const GlobalStyles = createGlobalStyle`
   * {
-    margin: 0,
-    padding: 0,
-    box-sizing: border-box,
-    backgroundColor: ${({ theme }) => theme.colors.background};
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     color: ${({ theme }) => theme.colors.foreground};
-    font-family: Roboto, Arial, sans-serif;
-    transition: all 0.50s linear;
+    font-family: 'Roboto Slab', Arial, sans-serif;
   }
+
+
+  body {
+    background: ${({ theme }) => theme.colors.backgroundDominant} 
+      url(${BackgroundImage}) no-repeat center center fixed;
+
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
 `;
