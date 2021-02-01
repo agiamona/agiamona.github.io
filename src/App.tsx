@@ -2,10 +2,10 @@ import React from "react";
 import { RouteComponentProps } from "@reach/router";
 
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "./themes/GlobalStyles";
+import { GlobalStyles } from "./styles/GlobalStyles";
 
 import Header from "./components/Header";
-import { lightTheme } from "./themes/themes";
+import { lightTheme } from "./styles/themes";
 import PageOne from "./components/PageOne";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

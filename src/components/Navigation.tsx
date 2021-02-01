@@ -1,11 +1,8 @@
-import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import React from "react";
 import styled from "styled-components";
-
-const MobileMenuBreakPoint = "max-width: 650px";
 
 const Link = styled.a`
   font-weight: 900;
@@ -14,74 +11,83 @@ const Link = styled.a`
 
   &:hover {
     color: ${({ theme }) => theme.colors.borders};
+    text-decoration: underline;
   }
 `;
 
 const Menu = styled.ul`
   list-style: none;
-  padding-bottom: 0.3em;
 `;
 
-const MenuItem = styled.li`
-  margin-left: 0.4em;
+const MenuItem = styled.li<{ mobileBreakpoint: string }>`
+  padding-left: 1em;
   display: inline;
-`;
-
-const MobileMenu = styled.button`
-  display: none;
-  border: none;
-  background-color: transparent;
-
-  @media only screen and (${MobileMenuBreakPoint}) {
-    display: inline;
-    margin: auto 0.3em;
-    font-size: 3em;
+  ${(props) => props.mobileBreakpoint} {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 0;
+    margin: 0;
+    border-top: 1px solid ${({ theme }) => theme.colors.borders};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.borders};
   }
 `;
 
-const SocialLink = styled.a`
-  font-size: 2em;
-  margin-left: 0.5em;
-`;
+interface INavigation {
+  showMenu: boolean;
+  mobileBreakpoint: string;
+}
 
-const StyledNav = styled.nav`
+const StyledNav = styled.nav<INavigation>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0.3em 1em;
 
-  @media only screen and (${MobileMenuBreakPoint}) {
+  ${(props) => props.mobileBreakpoint} {
     display: ${(props) => (props.showMenu ? "block" : "none")};
+    background-color: ${({ theme }) => theme.colors.background};
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1em 0;
+    padding-top: 6em;
+    box-shadow: 0 0.2em 0.4em ${({ theme }) => theme.colors.shodows};
   }
 `;
 
-export default function Navigation(showMenu: boolean): JSX.Element {
+export default function Navigation(props: INavigation): JSX.Element {
+  const { showMenu, mobileBreakpoint } = props;
   return (
     <>
-      <MobileMenu>
-        <FontAwesomeIcon icon={faBars} />
-      </MobileMenu>
-      <StyledNav>
-        <div>
-          <SocialLink href="https://github.com/agiamona/">
-            <FontAwesomeIcon icon={faGithubSquare} />
-          </SocialLink>
-          <SocialLink href="https://www.linkedin.com/in/ashleygiamona248/">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </SocialLink>
-        </div>
+      <StyledNav showMenu={showMenu} mobileBreakpoint={mobileBreakpoint}>
         <Menu>
-          <MenuItem>
+          <MenuItem mobileBreakpoint={mobileBreakpoint}>
+            <Link href="https://github.com/agiamona/">
+              <FontAwesomeIcon icon={faGithubSquare} />
+            </Link>
+          </MenuItem>
+          <MenuItem mobileBreakpoint={mobileBreakpoint}>
+            <Link href="https://www.linkedin.com/in/ashleygiamona248/">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </Link>
+          </MenuItem>
+        </Menu>
+
+        <Menu>
+          <MenuItem mobileBreakpoint={mobileBreakpoint}>
             <Link href="#about">About</Link>
           </MenuItem>
-          <MenuItem>
+          <MenuItem mobileBreakpoint={mobileBreakpoint}>
             <Link href="#skills">Skills</Link>
           </MenuItem>
-          <MenuItem>
+          <MenuItem mobileBreakpoint={mobileBreakpoint}>
             <Link href="#projects">Projects</Link>
           </MenuItem>
-          <MenuItem>
+          <MenuItem mobileBreakpoint={mobileBreakpoint}>
             <Link href="#contact">Contact</Link>
           </MenuItem>
         </Menu>
