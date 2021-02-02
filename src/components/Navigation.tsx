@@ -8,7 +8,7 @@ import {
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { NavigationItems, ILink } from "../assets/navigation-data";
+import { NavigationItems, ILink } from "../assets/navigationData";
 
 const Link = styled.a`
   font-weight: 900;
@@ -23,6 +23,7 @@ const Link = styled.a`
 
 const Menu = styled.ul`
   list-style: none;
+  margin: auto;
 `;
 
 const MenuItem = styled.li<{ mobileBreakpoint: string }>`
@@ -69,11 +70,17 @@ interface IMenuItem {
   link: ILink;
   mobileBreakpoint: string;
   icon?: IconDefinition;
+  mobileMenuIsVisible?: boolean;
 }
 const getMenuItem = (item: IMenuItem): JSX.Element => (
   <MenuItem mobileBreakpoint={item.mobileBreakpoint} key={item.link.href}>
     <Link href={item.link.href}>
-      {item.icon ? <FontAwesomeIcon icon={item.icon} /> : null}
+      {item.icon ? (
+        <FontAwesomeIcon
+          icon={item.icon}
+          size={item.mobileMenuIsVisible ? "2x" : "1x"}
+        />
+      ) : null}
       {item.link.title}
     </Link>
   </MenuItem>
@@ -91,12 +98,29 @@ export default function Navigation(props: INavigation): JSX.Element {
   };
 
   const navigationMenuItems = NavigationItems.map((item) =>
-    getMenuItem({ link: item, mobileBreakpoint })
+    getMenuItem({
+      link: item,
+      mobileBreakpoint,
+      mobileMenuIsVisible,
+    })
   );
-  const socialMenu = [
-    getMenuItem({ link: gitHubIcon, mobileBreakpoint, icon: faGithubSquare }),
-    getMenuItem({ link: linkedinIcon, mobileBreakpoint, icon: faLinkedin }),
-  ];
+
+  navigationMenuItems.push(
+    getMenuItem({
+      link: gitHubIcon,
+      mobileBreakpoint,
+      icon: faGithubSquare,
+      mobileMenuIsVisible,
+    })
+  );
+  navigationMenuItems.push(
+    getMenuItem({
+      link: linkedinIcon,
+      mobileBreakpoint,
+      icon: faLinkedin,
+      mobileMenuIsVisible,
+    })
+  );
 
   return (
     <>
@@ -104,7 +128,6 @@ export default function Navigation(props: INavigation): JSX.Element {
         mobileMenuIsVisible={mobileMenuIsVisible}
         mobileBreakpoint={mobileBreakpoint}
       >
-        <Menu>{socialMenu}</Menu>
         <Menu>{navigationMenuItems}</Menu>
       </StyledNav>
     </>
