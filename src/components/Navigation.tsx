@@ -17,7 +17,6 @@ const Link = styled.a`
 
   &:hover {
     color: ${({ theme }) => theme.colors.borders};
-    text-decoration: underline;
   }
 `;
 

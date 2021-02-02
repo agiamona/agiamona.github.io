@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/GlobalStyles";
 
 import Header from "./components/Header";
+import Landing from "./components/Landing";
 import { lightTheme } from "./styles/themes";
 import PageOne from "./components/PageOne";
 
@@ -15,6 +16,8 @@ export default function App(props: RouteComponentProps): JSX.Element {
       <>
         <GlobalStyles />
         <Header />
+        <Landing />
+
         <div style={{ height: "200vh" }} />
         <PageOne id="partone" text="Page One" />
         <PageOne id="parttwo" text="Page Two" />

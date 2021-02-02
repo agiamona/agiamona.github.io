@@ -13,9 +13,10 @@ const HeaderWrap = styled.header`
   width: 100%;
   height: 5em;
   display: flex;
-  box-shadow: 0 0.2em 0.4em ${({ theme }) => theme.colors.shodows};
+  filter: drop-shadow(0 0.15em 0.2em ${({ theme }) => theme.colors.shodows});
   display: flex;
   justify-content: space-between;
+  z-index: 100;
 `;
 
 const MobileMenu = styled.button<{ mobileBreakpoint: string }>`
