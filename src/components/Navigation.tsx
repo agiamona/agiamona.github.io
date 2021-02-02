@@ -1,8 +1,14 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
 import React from "react";
 import styled from "styled-components";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithubSquare,
+  faLinkedin,
+  IconDefinition,
+} from "@fortawesome/free-brands-svg-icons";
+
+import { NavigationItems, ILink } from "../assets/navigation-data";
 
 const Link = styled.a`
   font-weight: 900;
@@ -34,7 +40,7 @@ const MenuItem = styled.li<{ mobileBreakpoint: string }>`
 `;
 
 interface INavigation {
-  showMenu: boolean;
+  mobileMenuIsVisible: boolean;
   mobileBreakpoint: string;
 }
 
@@ -46,7 +52,7 @@ const StyledNav = styled.nav<INavigation>`
   padding: 0.3em 1em;
 
   ${(props) => props.mobileBreakpoint} {
-    display: ${(props) => (props.showMenu ? "block" : "none")};
+    display: ${(props) => (props.mobileMenuIsVisible ? "block" : "none")};
     background-color: ${({ theme }) => theme.colors.background};
     position: absolute;
     top: 0;
@@ -59,38 +65,47 @@ const StyledNav = styled.nav<INavigation>`
   }
 `;
 
+interface IMenuItem {
+  link: ILink;
+  mobileBreakpoint: string;
+  icon?: IconDefinition;
+}
+const getMenuItem = (item: IMenuItem): JSX.Element => (
+  <MenuItem mobileBreakpoint={item.mobileBreakpoint} key={item.link.href}>
+    <Link href={item.link.href}>
+      {item.icon ? <FontAwesomeIcon icon={item.icon} /> : null}
+      {item.link.title}
+    </Link>
+  </MenuItem>
+);
+
 export default function Navigation(props: INavigation): JSX.Element {
-  const { showMenu, mobileBreakpoint } = props;
+  const { mobileMenuIsVisible, mobileBreakpoint } = props;
+  const gitHubIcon = {
+    title: "",
+    href: "https://github.com/agiamona/",
+  };
+  const linkedinIcon = {
+    title: "",
+    href: "https://www.linkedin.com/in/ashleygiamona248/",
+  };
+
+  const navigationMenuItems = NavigationItems.map((item) =>
+    getMenuItem({ link: item, mobileBreakpoint })
+  );
+  const socialMenu = [
+    getMenuItem({ link: gitHubIcon, mobileBreakpoint, icon: faGithubSquare }),
+    getMenuItem({ link: linkedinIcon, mobileBreakpoint, icon: faLinkedin }),
+  ];
+
   return (
     <>
-      <StyledNav showMenu={showMenu} mobileBreakpoint={mobileBreakpoint}>
-        <Menu>
-          <MenuItem mobileBreakpoint={mobileBreakpoint}>
-            <Link href="https://github.com/agiamona/">
-              <FontAwesomeIcon icon={faGithubSquare} />
-            </Link>
-          </MenuItem>
-          <MenuItem mobileBreakpoint={mobileBreakpoint}>
-            <Link href="https://www.linkedin.com/in/ashleygiamona248/">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </Link>
-          </MenuItem>
-        </Menu>
-
-        <Menu>
-          <MenuItem mobileBreakpoint={mobileBreakpoint}>
-            <Link href="#about">About</Link>
-          </MenuItem>
-          <MenuItem mobileBreakpoint={mobileBreakpoint}>
-            <Link href="#skills">Skills</Link>
-          </MenuItem>
-          <MenuItem mobileBreakpoint={mobileBreakpoint}>
-            <Link href="#projects">Projects</Link>
-          </MenuItem>
-          <MenuItem mobileBreakpoint={mobileBreakpoint}>
-            <Link href="#contact">Contact</Link>
-          </MenuItem>
-        </Menu>
+      <StyledNav
+        mobileMenuIsVisible={mobileMenuIsVisible}
+        mobileBreakpoint={mobileBreakpoint}
+      >
+        <Menu>{socialMenu}</Menu>
+        <Menu>{navigationMenuItems}</Menu>
       </StyledNav>
     </>
   );

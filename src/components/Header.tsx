@@ -39,7 +39,10 @@ export default function Header(): JSX.Element {
   return (
     <HeaderWrap>
       <Logo />
-      <Navigation showMenu={openMobileMenu} mobileBreakpoint={mobileMenu} />
+      <Navigation
+        mobileMenuIsVisible={openMobileMenu}
+        mobileBreakpoint={mobileMenu}
+      />
       <MobileMenu
         mobileBreakpoint={mobileMenu}
         onClick={() => setOpenMobileMenu(!openMobileMenu)}
