@@ -22,9 +22,9 @@
   },
   "include": [
     "src",
-    "**/*.tsx", 
-    "**/*.ts", 
-    "**/*.js"
+    "src/**/*.tsx", 
+    "src/**/*.ts", 
+    "src/**/*.js"
   ],
     "exclude": [
       "node_modules"
