@@ -8,7 +8,7 @@ import {
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { NavigationItems, ILink } from "../assets/navigationData";
+import { NavigationItems, ILink } from "../assets/NavigationData";
 
 const Link = styled.a`
   font-weight: 900;

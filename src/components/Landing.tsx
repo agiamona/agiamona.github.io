@@ -20,7 +20,8 @@ const SubTitleHeading = styled.p`
 const LandingContainer = styled.section`
   background: ${({ theme }) => theme.colors.backgroundDominant}
     url(${BackgroundImage}) no-repeat top center fixed;
-  padding: 15em 0em;
+  padding: 10em 0em;
+  padding-bottom: 13em;
   text-align: center;
 `;
 

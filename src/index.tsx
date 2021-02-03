@@ -7,6 +7,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     <Router>
+      <App path="about" />
       <App path="page-one" />
       <App path="page-two" />
     </Router>
