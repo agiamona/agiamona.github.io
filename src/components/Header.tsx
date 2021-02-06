@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { breakpoints } from "../styles/breakpoints";
 
 import Logo from "./Logo";
@@ -35,20 +35,22 @@ const MobileMenu = styled.button<{ mobileBreakpoint: string }>`
 
 export default function Header(): JSX.Element {
   const { mobileMenu } = breakpoints;
-  const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [viewMobileMenu, setViewMobileMenu] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setViewMobileMenu((prevViewMobileMenu) => !prevViewMobileMenu);
+  };
 
   return (
     <HeaderWrap>
       <Logo />
       <Navigation
-        mobileMenuIsVisible={openMobileMenu}
+        viewMobileMenu={viewMobileMenu}
+        toggleMobileMenu={toggleMobileMenu}
         mobileBreakpoint={mobileMenu}
       />
-      <MobileMenu
-        mobileBreakpoint={mobileMenu}
-        onClick={() => setOpenMobileMenu(!openMobileMenu)}
-      >
-        <FontAwesomeIcon icon={faBars} />
+      <MobileMenu mobileBreakpoint={mobileMenu} onClick={toggleMobileMenu}>
+        <FontAwesomeIcon icon={viewMobileMenu ? faTimes : faBars} />
       </MobileMenu>
     </HeaderWrap>
   );
