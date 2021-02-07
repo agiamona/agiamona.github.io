@@ -8,26 +8,24 @@ import Header from "./components/Header";
 import Landing from "./components/Landing";
 import { lightTheme } from "./styles/themes";
 import PageOne from "./components/PageOne";
-import Section from "./components/Section";
 import data from "./assets/data.json";
-import About from "./components/About";
+import AboutSection from "./components/AboutSection";
+import SkillSection from "./components/SkillSection";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function App(props: RouteComponentProps): JSX.Element {
   return (
     <ThemeProvider theme={lightTheme}>
-      <>
+      <main>
         <GlobalStyles />
         <Header />
         <Landing title={data.landing.title} subtitle={data.landing.subtitle} />
-        <About text={data.aboutMe} />
-        <Section id="skills" title="Skills" transparent>
-          <p style={{ color: "blue" }}>Testing data here</p>
-        </Section>
+        <AboutSection text={data.aboutMe} />
+        <SkillSection skills={data.skills} />
 
         <PageOne id="partone" text="Page One" />
         <PageOne id="parttwo" text="Page Two" />
-      </>
+      </main>
     </ThemeProvider>
   );
 }

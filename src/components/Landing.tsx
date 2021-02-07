@@ -37,6 +37,8 @@ const HollowLinkButton = styled.a`
   position: relative;
   top: 5em;
 
+  transition: all 0.1s ease-in;
+
   &:visited {
     color: ${({ theme }) => theme.colors.background};
   }

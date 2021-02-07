@@ -33,6 +33,7 @@
   },
   "rules": {
     "linebreak-style": "off",
+    "react/no-array-index-key": 0,
     "prettier/prettier": [
       "error", { 
         "endOfLine": "auto" 

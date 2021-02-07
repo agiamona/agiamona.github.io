@@ -5,28 +5,60 @@
   },
   "aboutMe": [
     "Hi, I’m Ashley Elena Giamona!",
-    "A Software Engineer with demonstrated experience in full-stack web development and end-to-end solutions. Passionate about solving real business problems with clean, reusable code that is maintainable, and efficient and well tested. Experienced with object-oriented programming and functional programming paradigms.", 
+    "A Software Engineer with demonstrated experience in full-stack web development and end-to-end solutions. Passionate about solving real business problems with clean, reusable code that is maintainable, and efficient and well tested. Experienced with object-oriented programming and functional programming paradigms.",
     "Excited to solve the unique problems faced on the frontend to successfully present information to users in an intuitive and aesthetically pleasing manner. Utilizes interest in the principles of art and usability to create positive user experiences across devices large and small. Familiar with all phases of the design process, from personas and wireframes to implementing production ready software. Loves the challenges that pertain to the backend to process data efficiently for frontend consumption and long-term storage in the database. As well as keeping data secure and safe from unauthorized access."
   ],
-  "skills": {
-    "frontend": ["React.js", "HTML", "CSS","CSS-In-JS", "Styled Components"],
-    "languages":["JavaScript", "Java", "Familiar with TypeScript"],
-    "OS": ["Windows", "Linux", "Command Line Interfaces"],
-    "Other": []
-  },
-  "projects":{
+  "skills": [
+    {"category": "Frontend",
+      "list": [
+        "React.js",
+        "HTML",
+        "CSS",
+        "SCSS",
+        "CSS-In-JS",
+        "Styled Components"
+      ]
+    },
+    {
+      "category": "Languages",
+      "list": [
+        "JavaScript",
+        "Node.js",
+        "Java",
+        "Android",
+        "Ruby on Rails",
+        "Familiar with TypeScript"
+      ]
+    },
+    {
+      "category": "Operating Systems",
+      "list": ["Windows", "Linux", "Command Line Interfaces"]
+    },
+    {
+      "category": "Other",
+      "list": [
+        "Databases",
+        "SQL",
+        "Git",
+        "Testing (from Unit to UI)",
+        "Cloud Services",
+        "Amazon Web Services (AWS)",
+        "REST APIs"
+      ]
+    }
+  ],
+  "projects": {
     "placeholder": {
       "title": "",
-      "skills":{},
+      "points": {},
       "description": "",
       "thumbnail": "",
       "liveSite": "",
       "sourceCode": "",
-      "dates": { 
-        "start": "", 
+      "dates": {
+        "start": "",
         "end": ""
       }
     }
-
   }
 }

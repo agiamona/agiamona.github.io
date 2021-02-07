@@ -14,7 +14,7 @@ const SectionHeader = styled.h2<{ transparent: boolean }>`
   padding: 1.5em;
   padding-left: 3em;
   border-bottom: 1.5px solid ${({ theme }) => theme.colors.borders};
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 `;
 
 type SectionProps = {
