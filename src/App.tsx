@@ -9,6 +9,8 @@ import Landing from "./components/Landing";
 import { lightTheme } from "./styles/themes";
 import PageOne from "./components/PageOne";
 import Section from "./components/Section";
+import data from "./assets/data.json";
+import About from "./components/About";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function App(props: RouteComponentProps): JSX.Element {
@@ -17,16 +19,13 @@ export default function App(props: RouteComponentProps): JSX.Element {
       <>
         <GlobalStyles />
         <Header />
-        <Landing />
-
-        <div style={{ height: "200vh" }} />
-        <PageOne id="partone" text="Page One" />
-        <Section id="about" title="About Me" transparent>
-          <p style={{ color: "red" }}>Testing data here</p>
-        </Section>
-        <Section id="skills" title="Skills">
+        <Landing title={data.landing.title} subtitle={data.landing.subtitle} />
+        <About text={data.aboutMe} />
+        <Section id="skills" title="Skills" transparent>
           <p style={{ color: "blue" }}>Testing data here</p>
         </Section>
+
+        <PageOne id="partone" text="Page One" />
         <PageOne id="parttwo" text="Page Two" />
       </>
     </ThemeProvider>

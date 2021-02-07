@@ -46,18 +46,18 @@ const HollowLinkButton = styled.a`
   }
 `;
 
-export default function Landing(): JSX.Element {
+interface ILanding {
+  title: string;
+  subtitle: string;
+}
+export default function Landing(props: ILanding): JSX.Element {
+  const { title, subtitle } = props;
+
   return (
     <LandingContainer>
-      <TitleHeading>
-        Software Engineer Specializing in Full Stack Web Development
-      </TitleHeading>
-      <SubTitleHeading>
-        Passionate about crafting postive user experiences and solving problems
-        through end-to-end solutions (frontend, backend, and hosting) with clean
-        code that is maintainable, efficient, and well-tested.
-      </SubTitleHeading>
-      <HollowLinkButton href="#About">Learn More</HollowLinkButton>
+      <TitleHeading>{title}</TitleHeading>
+      <SubTitleHeading>{subtitle}</SubTitleHeading>
+      <HollowLinkButton href="#about">Learn More</HollowLinkButton>
     </LandingContainer>
   );
 }

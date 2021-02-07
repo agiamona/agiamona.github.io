@@ -15,7 +15,7 @@ interface INavigation {
   toggleMobileMenu: () => void;
 }
 
-const Navigation = (props: INavigation): JSX.Element => {
+export default function Navigation(props: INavigation): JSX.Element {
   const { viewMobileMenu, mobileBreakpoint, toggleMobileMenu } = props;
 
   const navigationMenuItems = NavigationItems.map((item) => (
@@ -66,6 +66,4 @@ const Navigation = (props: INavigation): JSX.Element => {
       </StyledNav>
     </>
   );
-};
-
-export default Navigation;
+}
