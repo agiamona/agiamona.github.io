@@ -1,16 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import Section from "./Section";
-import SkillCard from "./SkillCard";
-
-const SkillsContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-`;
+import Section from "../SectionComponent";
+import { SubSectionContainer } from "../SectionStyles";
+import SkillCard from "../ListCard";
 
 interface ISkill {
   category: string;
@@ -25,7 +16,7 @@ export default function SkillSection(props: { skills: ISkill[] }): JSX.Element {
 
   return (
     <Section title="Skills" id="skills" transparent>
-      <SkillsContainer>{skillCards}</SkillsContainer>
+      <SubSectionContainer>{skillCards}</SubSectionContainer>
     </Section>
   );
 }

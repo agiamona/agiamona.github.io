@@ -50,7 +50,8 @@
   "projects": {
     "placeholder": {
       "title": "",
-      "points": {},
+      "tagline":"",
+      "detailsList": {},
       "description": "",
       "thumbnail": "",
       "liveSite": "",

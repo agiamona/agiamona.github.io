@@ -49,22 +49,23 @@ interface ISkillCard {
   title: string;
   list: string[];
 }
+
 export default function SkillCard(props: ISkillCard): JSX.Element {
   const { title, list } = props;
+  const listItems = list.map((skill, index) => (
+    <ListItem key={index}>
+      <BulletContainer>
+        <FontAwesomeIcon icon={faAngleDoubleRight} />
+      </BulletContainer>
+      {skill}
+    </ListItem>
+  ));
+
   return (
     <CardBackground>
       <Heading>{title}</Heading>
       <CardBody>
-        <ListContainer>
-          {list.map((skill, index) => (
-            <ListItem key={index}>
-              <BulletContainer>
-                <FontAwesomeIcon icon={faAngleDoubleRight} />
-              </BulletContainer>
-              {skill}
-            </ListItem>
-          ))}
-        </ListContainer>
+        <ListContainer>{listItems}</ListContainer>
       </CardBody>
     </CardBackground>
   );

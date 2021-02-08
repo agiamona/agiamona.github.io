@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Section from "./Section";
+import Section from "../SectionComponent";
 
 const StyledP = styled.p`
   text-align: center;
