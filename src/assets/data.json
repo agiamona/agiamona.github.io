@@ -27,7 +27,8 @@
         "Java",
         "Android",
         "Ruby on Rails",
-        "Familiar with TypeScript"
+        " TypeScript",
+        "Familiar with Python"
       ]
     },
     {
@@ -47,19 +48,42 @@
       ]
     }
   ],
-  "projects": {
-    "placeholder": {
-      "title": "",
-      "tagline":"",
-      "detailsList": {},
-      "description": "",
-      "thumbnail": "",
+  "projects": [
+    {
+      "title": "Project A",
+      "tagline":"Tagline for project A",
+      "detailsList": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "A thorough description of project A. What the problem was and how it was solved.",
+      "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
+      "thumbnailAlt": "Screenshot of Project A's Homepage",
+      "liveSite": "www.google.com",
+      "sourceCode": "www.github.com",
+      "dates": {
+        "start": "Jan, 2020",
+        "end": "Present"
+      }
+    },
+    {
+      "title": "Project B",
+      "tagline":"Tagline for project B.",
+      "detailsList": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "A thorough description of project B. What the problem was and how it was solved.",
+      "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
+      "thumbnailAlt": "Screenshot of Project B's Homepage",
       "liveSite": "",
-      "sourceCode": "",
+      "sourceCode": "www.github.com",
       "dates": {
         "start": "",
         "end": ""
       }
     }
-  }
+  ]
 }

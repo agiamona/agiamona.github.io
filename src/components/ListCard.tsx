@@ -12,7 +12,7 @@ const Heading = styled.h3`
   margin-bottom: 1em;
 `;
 
-const CardBackground = styled.article`
+const CardBackground = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
   text-align: left;
   width: 17em;

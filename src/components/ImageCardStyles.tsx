@@ -6,7 +6,8 @@ export const CardContainer = styled.div`
     0.15em 0.25em 0.2em ${({ theme }) => theme.colors.shodows}
   );
   width: 16em;
-  height: 16em;
+  min-height: 14.5em;
+  padding-bottom: 1.5em;
   cursor: pointer;
 `;
 
@@ -21,9 +22,10 @@ export const Heading = styled.h3`
   padding-bottom: 0.4em;
 `;
 
-export const Description = styled.p`
+export const Tagline = styled.p`
   color: ${({ theme }) => theme.colors.foreground};
   padding-bottom: 0.4em;
+  min-height: 3em;
 `;
 
 export const DetailsContainer = styled.div`
@@ -38,14 +40,14 @@ export const ExpandIcon = styled.button`
   text-align: right;
   font-size: 1.1em;
   cursor: pointer;
-
-  &:hover {
-    border-bottom: solid 1px ${({ theme }) => theme.colors.shodows};
-  }
+  position: absolute;
+  bottom: 0.25em;
+  right: 0.6em;
+  font-weight: bold;
 
   & ${this} svg {
     font-size: 1.2em;
     position: relative;
-    top: 0.05em;
+    top: 0.12em;
   }
 `;

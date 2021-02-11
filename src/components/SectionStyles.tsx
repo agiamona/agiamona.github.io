@@ -9,7 +9,7 @@ export const SubSectionContainer = styled.div`
   flex-direction: row;
 `;
 
-export const SectionContainer = styled.section<{ transparent: boolean }>`
+export const SectionContainer = styled.article<{ transparent: boolean }>`
   background-color: ${({ transparent, theme }) =>
     transparent ? "transparent" : theme.colors.background};
   padding: 0 2em;

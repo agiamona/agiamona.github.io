@@ -23,7 +23,7 @@ export default function App(props: RouteComponentProps): JSX.Element {
         <Landing title={data.landing.title} subtitle={data.landing.subtitle} />
         <AboutSection text={data.aboutMe} />
         <SkillSection skills={data.skills} />
-        <ProjectSection />
+        <ProjectSection projects={data.projects} />
 
         <PageOne id="partone" text="Page One" />
         <PageOne id="parttwo" text="Page Two" />
