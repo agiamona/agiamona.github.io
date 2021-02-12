@@ -2,16 +2,15 @@ import React from "react";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import IProject from "./IProject";
-
 import {
-  CardContainer,
   Thumbnail,
   DetailsContainer,
   Heading,
   Tagline,
   ExpandIcon,
+  CardSubContainer,
 } from "./ImageCardStyles";
+import IProject from "./IProject";
 
 export default function ImageCardMinimized(props: {
   project: IProject;
@@ -21,7 +20,7 @@ export default function ImageCardMinimized(props: {
   const { title, tagline, thumbnail, thumbnailAlt } = project;
 
   return (
-    <CardContainer onClick={onClick}>
+    <CardSubContainer>
       <Thumbnail alt={thumbnailAlt} src={thumbnail} />
       <DetailsContainer>
         <Heading>{title}</Heading>
@@ -30,6 +29,6 @@ export default function ImageCardMinimized(props: {
           More <FontAwesomeIcon icon={faAngleRight} />
         </ExpandIcon>
       </DetailsContainer>
-    </CardContainer>
+    </CardSubContainer>
   );
 }

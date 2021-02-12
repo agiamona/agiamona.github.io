@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { CardContainer } from "./ImageCardStyles";
 import ImageCardMinimized from "./ImageCardMinimized";
+import ImageCardExpanded from "./ImageCardExpanded";
 import IProject from "./IProject";
 
-export default function ProjectCard(props: { project: IProject }): JSX.Element {
+export default function ImageCard(props: { project: IProject }): JSX.Element {
   const [expand, setExpand] = useState(false);
   const { project } = props;
 
@@ -10,5 +12,27 @@ export default function ProjectCard(props: { project: IProject }): JSX.Element {
     setExpand((prevState) => !prevState);
   };
 
-  return <ImageCardMinimized project={project} onClick={toggleExpand} />;
+  const cardRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (expand && cardRef.current) {
+      cardRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+  const expandedCard = (
+    <ImageCardExpanded project={project} onClick={toggleExpand} />
+  );
+  const minimizedCard = (
+    <ImageCardMinimized project={project} onClick={toggleExpand} />
+  );
+
+  return (
+    <CardContainer
+      ref={cardRef}
+      onClick={expand ? undefined : toggleExpand}
+      expand={expand}
+    >
+      {expand ? expandedCard : minimizedCard}
+    </CardContainer>
+  );
 }

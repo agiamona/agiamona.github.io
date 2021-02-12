@@ -57,11 +57,11 @@
         "Skill 2",
         "Skill 3"
       ],
-      "description": "A thorough description of project A. What the problem was and how it was solved.",
+      "description": "A description of project A. What the problem was and how it was solved.",
       "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
       "thumbnailAlt": "Screenshot of Project A's Homepage",
-      "liveSite": "www.google.com",
-      "sourceCode": "www.github.com",
+      "liveSite": "http://www.google.com",
+      "sourceCode": "http://www.github.com",
       "dates": {
         "start": "Jan, 2020",
         "end": "Present"
@@ -75,11 +75,29 @@
         "Skill 2",
         "Skill 3"
       ],
-      "description": "A thorough description of project B. What the problem was and how it was solved.",
+      "description": "A description of project B. What the problem was and how it was solved.",
       "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
       "thumbnailAlt": "Screenshot of Project B's Homepage",
+      "liveSite": "http://www.google.com",
+      "sourceCode": "",
+      "dates": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "title": "Project C",
+      "tagline":"Tagline for project C.",
+      "detailsList": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "A description of project C. What the problem was and how it was solved.",
+      "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
+      "thumbnailAlt": "Screenshot of Project C's Homepage",
       "liveSite": "",
-      "sourceCode": "www.github.com",
+      "sourceCode": "http://www.github.com",
       "dates": {
         "start": "",
         "end": ""
