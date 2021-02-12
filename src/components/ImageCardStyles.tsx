@@ -86,6 +86,10 @@ export const LargeThumbnail = styled.img`
   width: 90%;
 `;
 
+export const LinksContainer = styled.div`
+  margin-top: 0.5em;
+`;
+
 export const Tagline = styled.p`
   color: ${({ theme }) => theme.colors.foreground};
   padding-bottom: 0.4em;

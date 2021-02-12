@@ -11,6 +11,7 @@ import data from "./assets/data.json";
 import AboutSection from "./components/sections/AboutSection";
 import SkillSection from "./components/sections/SkillSection";
 import ProjectSection from "./components/sections/ProjectSection";
+import ContactSection from "./components/sections/ContactSection";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function App(props: RouteComponentProps): JSX.Element {
@@ -23,6 +24,7 @@ export default function App(props: RouteComponentProps): JSX.Element {
         <AboutSection text={data.aboutMe} />
         <SkillSection skills={data.skills} />
         <ProjectSection projects={data.projects} />
+        <ContactSection text={data.contact} />
       </main>
     </ThemeProvider>
   );

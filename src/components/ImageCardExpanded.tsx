@@ -9,6 +9,7 @@ import {
   CloseButton,
   Description,
   SubHeading,
+  LinksContainer,
 } from "./ImageCardStyles";
 import List from "./List";
 
@@ -36,14 +37,14 @@ export default function ImageCardExpanded(props: {
       </CloseButton>
       <CardSubContainer centered>
         <LargeThumbnail alt={thumbnailAlt} src={thumbnail} />
-        <div>
+        <LinksContainer>
           {liveSite && liveSite.length > 0 ? (
             <ExternalLink url={liveSite} name="Live Site" />
           ) : null}
           {sourceCode && sourceCode.length > 0 ? (
             <ExternalLink url={sourceCode} name="Source Code" />
           ) : null}
-        </div>
+        </LinksContainer>
       </CardSubContainer>
 
       <CardSubContainer>

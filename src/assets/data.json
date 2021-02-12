@@ -8,8 +8,10 @@
     "A Software Engineer with demonstrated experience in full-stack web development and end-to-end solutions. Passionate about solving real business problems with clean, reusable code that is maintainable, and efficient and well tested. Experienced with object-oriented programming and functional programming paradigms.",
     "Excited to solve the unique problems faced on the frontend to successfully present information to users in an intuitive and aesthetically pleasing manner. Utilizes interest in the principles of art and usability to create positive user experiences across devices large and small. Familiar with all phases of the design process, from personas and wireframes to implementing production ready software. Loves the challenges that pertain to the backend to process data efficiently for frontend consumption and long-term storage in the database. As well as keeping data secure and safe from unauthorized access."
   ],
+  "contact": "I would love to hear from you and learn about your project needs and business goals. Please complete the form below to get started.",
   "skills": [
-    {"category": "Frontend",
+    {
+      "category": "Frontend",
       "list": [
         "React.js",
         "HTML",
@@ -51,12 +53,8 @@
   "projects": [
     {
       "title": "Project A",
-      "tagline":"Tagline for project A",
-      "detailsList": [
-        "Skill 1",
-        "Skill 2",
-        "Skill 3"
-      ],
+      "tagline": "Tagline for project A",
+      "detailsList": ["Skill 1", "Skill 2", "Skill 3"],
       "description": "A description of project A. What the problem was and how it was solved.",
       "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
       "thumbnailAlt": "Screenshot of Project A's Homepage",
@@ -69,12 +67,8 @@
     },
     {
       "title": "Project B",
-      "tagline":"Tagline for project B.",
-      "detailsList": [
-        "Skill 1",
-        "Skill 2",
-        "Skill 3"
-      ],
+      "tagline": "Tagline for project B.",
+      "detailsList": ["Skill 1", "Skill 2", "Skill 3"],
       "description": "A description of project B. What the problem was and how it was solved.",
       "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
       "thumbnailAlt": "Screenshot of Project B's Homepage",
@@ -87,12 +81,8 @@
     },
     {
       "title": "Project C",
-      "tagline":"Tagline for project C.",
-      "detailsList": [
-        "Skill 1",
-        "Skill 2",
-        "Skill 3"
-      ],
+      "tagline": "Tagline for project C.",
+      "detailsList": ["Skill 1", "Skill 2", "Skill 3"],
       "description": "A description of project C. What the problem was and how it was solved.",
       "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
       "thumbnailAlt": "Screenshot of Project C's Homepage",
