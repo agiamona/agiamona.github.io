@@ -7,7 +7,6 @@ import { GlobalStyles } from "./styles/GlobalStyles";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
 import { lightTheme } from "./styles/themes";
-import PageOne from "./components/PageOne";
 import data from "./assets/data.json";
 import AboutSection from "./components/sections/AboutSection";
 import SkillSection from "./components/sections/SkillSection";
@@ -24,9 +23,6 @@ export default function App(props: RouteComponentProps): JSX.Element {
         <AboutSection text={data.aboutMe} />
         <SkillSection skills={data.skills} />
         <ProjectSection projects={data.projects} />
-
-        <PageOne id="partone" text="Page One" />
-        <PageOne id="parttwo" text="Page Two" />
       </main>
     </ThemeProvider>
   );
