@@ -66,8 +66,8 @@
       "liveSite": "http://www.google.com",
       "sourceCode": "http://www.github.com",
       "dates": {
-        "start": "Jan, 2020",
-        "end": "Present"
+        "start": "Mar 2020",
+        "end": "Dec 2020"
       }
     },
     {
@@ -80,8 +80,7 @@
       "liveSite": "http://www.google.com",
       "sourceCode": "",
       "dates": {
-        "start": "",
-        "end": ""
+        "start": "Jan 2020"
       }
     },
     {
@@ -92,11 +91,7 @@
       "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
       "thumbnailAlt": "Screenshot of Project C's Homepage",
       "liveSite": "",
-      "sourceCode": "http://www.github.com",
-      "dates": {
-        "start": "",
-        "end": ""
-      }
+      "sourceCode": "http://www.github.com"
     }
   ]
 }

@@ -37,6 +37,12 @@ export const CloseButton = styled.button`
   cursor: pointer;
 `;
 
+export const DateText = styled.p`
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: -0.5em;
+`;
+
 export const DetailsContainer = styled.div`
   padding: 0 1em;
 `;

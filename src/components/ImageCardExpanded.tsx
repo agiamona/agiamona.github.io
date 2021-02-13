@@ -10,6 +10,7 @@ import {
   Description,
   SubHeading,
   LinksContainer,
+  DateText,
 } from "./ImageCardStyles";
 import List from "./List";
 
@@ -28,7 +29,26 @@ export default function ImageCardExpanded(props: {
     sourceCode,
     description,
     detailsList,
+    dates,
   } = project;
+
+  const dateString = (): string => {
+    if (!dates) {
+      return "";
+    }
+    const { start, end } = dates;
+    let result = "";
+
+    if (start && end) {
+      result = `${start} to ${end}`;
+    } else if (start && !end) {
+      result = `${start} to Present`;
+    } else if (!start && end) {
+      result = end;
+    }
+
+    return result;
+  };
 
   return (
     <>
@@ -49,6 +69,7 @@ export default function ImageCardExpanded(props: {
 
       <CardSubContainer>
         <Heading>{title}</Heading>
+        <DateText>{dateString()}</DateText>
         <SubHeading>Description</SubHeading>
         <Description>{description}</Description>
         <SubHeading>Details</SubHeading>

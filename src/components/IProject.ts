@@ -8,7 +8,7 @@ export default interface IProject {
   liveSite?: string;
   sourceCode?: string;
   dates?: {
-    start: string;
-    end: string;
+    start?: string;
+    end?: string;
   };
 }
