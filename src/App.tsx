@@ -24,7 +24,7 @@ export default function App(props: RouteComponentProps): JSX.Element {
         <AboutSection text={data.aboutMe} />
         <SkillSection skills={data.skills} />
         <ProjectSection projects={data.projects} />
-        <ContactSection text={data.contact} />
+        <ContactSection contact={data.contact} />
       </main>
     </ThemeProvider>
   );

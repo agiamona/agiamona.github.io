@@ -8,7 +8,12 @@
     "A Software Engineer with demonstrated experience in full-stack web development and end-to-end solutions. Passionate about solving real business problems with clean, reusable code that is maintainable, and efficient and well tested. Experienced with object-oriented programming and functional programming paradigms.",
     "Excited to solve the unique problems faced on the frontend to successfully present information to users in an intuitive and aesthetically pleasing manner. Utilizes interest in the principles of art and usability to create positive user experiences across devices large and small. Familiar with all phases of the design process, from personas and wireframes to implementing production ready software. Loves the challenges that pertain to the backend to process data efficiently for frontend consumption and long-term storage in the database. As well as keeping data secure and safe from unauthorized access."
   ],
-  "contact": "I would love to hear from you and learn about your project needs and business goals. Please complete the form below to get started.",
+  "contact": {
+    "notSubmitted": "I would love to hear from you and learn about your project needs and business goals. Please complete the form below to get started.",
+    "submissionSuccess": "Your form has been submitted successfully!",
+    "submissionError": "An error occurred when submitting the form. Please try again later. Thank you.",
+    "submitting": "Submitting form..."
+  },
   "skills": [
     {
       "category": "Frontend",

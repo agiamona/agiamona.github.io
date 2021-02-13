@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Form = styled.form`
@@ -9,14 +9,15 @@ const Form = styled.form`
   min-height: 20em;
 `;
 
-const StyledInput = styled.input`
+const Input = styled.input`
   width: 100%;
   font-size: 1em;
   margin-bottom: 1em;
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.colors.borders};
-  padding: 0.4em;
+  padding: 0.5em;
   font-family: "Roboto Slab", Arial, sans-serif;
+  border-radius: 5px;
 `;
 
 const SubmitButton = styled.input`
@@ -29,6 +30,7 @@ const SubmitButton = styled.input`
   padding: 0.3em 1em;
   margin: auto;
   font-family: "Roboto Slab", Arial, sans-serif;
+  width: 100%;
 
   transition: all 0.1s ease-in;
 
@@ -44,43 +46,82 @@ const TextArea = styled.textarea`
   width: 100%;
   margin-bottom: 1em;
   font-size: 1em;
-  padding 0.4em;
+  padding 0.5em;
   font-family: "Roboto Slab", Arial, sans-serif;
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.colors.borders};
+  border-radius: 5px;
 `;
 
-export default function ContactForm(): JSX.Element {
+type InputChangeType = React.ChangeEvent<HTMLInputElement>;
+type TextareaChangeType = React.ChangeEvent<HTMLTextAreaElement>;
+
+interface IForm {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+export default function ContactForm(props: {
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+}): JSX.Element {
+  const { onSubmit } = props;
+  const intialformData = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+  const [formData, setformData] = useState<IForm>(intialformData);
+
+  const handleChange = (e: InputChangeType | TextareaChangeType) => {
+    const { name, value } = e.target;
+    setformData({ ...formData, [name]: value });
+  };
+
   return (
-    <Form>
-      <StyledInput
+    <Form
+      onSubmit={onSubmit}
+      action="https://formspree.io/f/mvovnpvj"
+      method="POST"
+    >
+      <Input
         type="text"
         id="name"
         name="name"
         placeholder="Name*"
+        value={formData.name}
+        onChange={handleChange}
         required
       />
-      <StyledInput
+      <Input
         type="email"
         id="email"
         name="email"
         placeholder="Email*"
+        value={formData.email}
+        onChange={handleChange}
         required
       />
-      <StyledInput
+      <Input
         type="text"
         id="subject"
         name="subject"
-        placeholder="Message Subject*"
+        placeholder="Subject*"
+        value={formData.subject}
+        onChange={handleChange}
         required
       />
       <TextArea
         id="message"
         name="message"
-        rows={4}
+        rows={6}
         cols={50}
-        required
         placeholder="Message*"
+        value={formData.message}
+        onChange={handleChange}
+        required
       />
       <SubmitButton type="submit" value="Submit" />
     </Form>

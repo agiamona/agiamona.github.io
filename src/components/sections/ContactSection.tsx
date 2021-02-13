@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useForm } from "@formspree/react";
 import ContactForm from "../ContactForm";
 import Section from "../SectionComponent";
 import SocialMediaLinks from "../SocialMediaLinks";
@@ -34,16 +35,51 @@ const SubSection = styled.h5`
   font-size: 1.2em;
 `;
 
-export default function ContactSection(props: { text: string }): JSX.Element {
-  const { text } = props;
+enum FormResults {
+  SUCCESS = "submissionSuccess",
+  ERROR = "submissionError",
+  NOT_SUBMITTED = "notSubmitted",
+  SUBMITTING = "submitting",
+}
+
+interface IContactMessages {
+  notSubmitted: string;
+  submissionSuccess: string;
+  submissionError: string;
+  submitting: string;
+}
+
+const FORM_ID = "mvovnpvj";
+export default function ContactSection(props: {
+  contact: IContactMessages;
+}): JSX.Element {
+  const { SUCCESS, ERROR, NOT_SUBMITTED, SUBMITTING } = FormResults;
+  const { contact } = props;
+  const [state, handleSubmit] = useForm(FORM_ID);
+  const { submitting, succeeded, errors } = state;
+
+  const result = (): FormResults => {
+    if (submitting) {
+      return SUBMITTING;
+    }
+    if (succeeded) {
+      return SUCCESS;
+    }
+    if (errors.length > 0) {
+      return ERROR;
+    }
+    return NOT_SUBMITTED;
+  };
 
   return (
     <Section title="Contact Me" id="contact" transparent>
       <FormContainer>
         <FormIntroContainer>
-          <FormIntro>{text}</FormIntro>
+          <FormIntro>{contact[result()]}</FormIntro>
         </FormIntroContainer>
-        <ContactForm />
+        {result() === NOT_SUBMITTED ? (
+          <ContactForm onSubmit={handleSubmit} />
+        ) : null}
         <SubSection>You can also find me at the following places:</SubSection>
         <SocialMediaLinks />
       </FormContainer>
