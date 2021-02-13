@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavigationItems, SocialLinkItems } from "../assets/NavigationData";
 
 export const StyledFooter = styled.footer`
   background-color: ${({ theme }) => theme.colors.background};
@@ -8,11 +10,32 @@ export const StyledFooter = styled.footer`
   padding-top: 1em;
   min-height: 14em;
   position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 
-export const FooterItemsContainer = styled.div`
-  width: 100%;
-  display: flex;
+export const PlainList = styled.ul`
+  list-style: none;
+  font-size: 1.3em;
+  font-weight: bold;
+`;
+
+export const StyledLink = styled.a`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.foreground};
+
+  &:visited {
+    color: ${({ theme }) => theme.colors.foreground};
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.borders};
+  }
+
+  & > svg {
+    margin-right: 0.5em;
+  }
 `;
 
 export const CopyrightLabel = styled.p`
@@ -23,8 +46,25 @@ export const CopyrightLabel = styled.p`
 `;
 
 export default function Footer(): JSX.Element {
+  const navItems = NavigationItems.map((item) => (
+    <li key={item.href}>
+      <StyledLink href={item.href}>{item.title}</StyledLink>
+    </li>
+  ));
+  const socialItems = SocialLinkItems.map((item) => (
+    <li key={item.href}>
+      <StyledLink href={item.href} target="_blank">
+        {item.icon ? <FontAwesomeIcon icon={item.icon} /> : null}
+        {item.title}
+      </StyledLink>
+    </li>
+  ));
+
   return (
     <StyledFooter>
+      <PlainList>{navItems}</PlainList>
+      <PlainList>{socialItems}</PlainList>
+
       <CopyrightLabel>Copyright &copy Ashley Elena Giamona 2021</CopyrightLabel>
     </StyledFooter>
   );
