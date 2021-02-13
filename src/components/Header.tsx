@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { breakpoints } from "../styles/breakpoints";
 
 import Logo from "./Logo";
@@ -50,7 +49,9 @@ export default function Header(): JSX.Element {
         mobileBreakpoint={mobileMenu}
       />
       <MobileMenu mobileBreakpoint={mobileMenu} onClick={toggleMobileMenu}>
-        <FontAwesomeIcon icon={viewMobileMenu ? faTimes : faBars} />
+        <FontAwesomeIcon
+          icon={viewMobileMenu ? ["fas", "times"] : ["fas", "bars"]}
+        />
       </MobileMenu>
     </HeaderWrap>
   );

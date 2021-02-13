@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const StyledLink = styled.a`
@@ -31,7 +30,7 @@ export default function ExternalLink(props: {
     <StyledLink href={url} target="_blank">
       {name}
       <sup>
-        <FontAwesomeIcon icon={faExternalLinkAlt} />
+        <FontAwesomeIcon icon="external-link-alt" />
       </sup>
     </StyledLink>
   );

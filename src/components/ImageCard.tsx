@@ -9,7 +9,7 @@ export default function ImageCard(props: { project: IProject }): JSX.Element {
   const { project } = props;
 
   const toggleExpand = (): void => {
-    setExpand((prevState) => !prevState);
+    setExpand(!expand);
   };
 
   const cardRef = useRef<HTMLDivElement>(null);

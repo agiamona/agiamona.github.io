@@ -7,6 +7,9 @@ import SocialMediaLinks from "../SocialMediaLinks";
 
 const FormContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
+  filter: drop-shadow(
+    0.15em 0.25em 0.15em ${({ theme }) => theme.colors.shodows}
+  );
   border-radius: 8px;
   padding: 2em 3em;
   max-width: 40em;

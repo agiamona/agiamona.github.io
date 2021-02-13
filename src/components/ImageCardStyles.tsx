@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CardContainer = styled.div<{ expand: boolean }>`
   background-color: ${({ theme }) => theme.colors.background};
   filter: drop-shadow(
-    0.15em 0.25em 0.2em ${({ theme }) => theme.colors.shodows}
+    0.15em 0.25em 0.15em ${({ theme }) => theme.colors.shodows}
   );
   width: ${(props) => (props.expand ? "80vw" : "16em")};
   min-height: ${(props) => (props.expand ? "25em" : "14.5em")};
@@ -32,7 +32,7 @@ export const CloseButton = styled.button`
   position: absolute;
   top: 0.5em;
   right: 0.5em;
-  font-size: 1.5em;
+  font-size: 2em;
   z-index: 5000;
   cursor: pointer;
 `;

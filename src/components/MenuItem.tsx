@@ -1,5 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import { IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core";
 
 export const Link = styled.a`
   font-weight: 900;
@@ -31,14 +33,20 @@ interface IMenuItem {
   mobileBreakpoint: string;
   viewMobileMenu: boolean;
   toggleMobileMenu?: () => void;
-  icon?: JSX.Element;
+  icon?: [IconPrefix, IconName];
 }
 
 const MenuItem = (item: IMenuItem): JSX.Element => {
+  const { viewMobileMenu, icon } = item;
+
   return (
     <StyledLi mobileBreakpoint={item.mobileBreakpoint}>
       <Link href={item.href} onClick={item.toggleMobileMenu}>
-        {item.icon ? item.icon : item.title}
+        {icon ? (
+          <FontAwesomeIcon icon={icon} size={viewMobileMenu ? "2x" : "1x"} />
+        ) : (
+          item.title
+        )}
       </Link>
     </StyledLi>
   );

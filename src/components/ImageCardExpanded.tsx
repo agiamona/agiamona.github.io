@@ -1,6 +1,5 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import ExternalLink from "./ExternalLink";
 import {
   CardSubContainer,
@@ -53,7 +52,7 @@ export default function ImageCardExpanded(props: {
   return (
     <>
       <CloseButton onClick={onClick}>
-        <FontAwesomeIcon icon={faTimesCircle} />
+        <FontAwesomeIcon icon="times" />
       </CloseButton>
       <CardSubContainer centered>
         <LargeThumbnail alt={thumbnailAlt} src={thumbnail} />

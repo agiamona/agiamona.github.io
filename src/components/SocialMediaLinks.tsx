@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { SocialLinkItems, ILink } from "../assets/NavigationData";
 
 const SocialLink = styled.a`
   background-color: ${({ theme }) => theme.colors.foreground};
@@ -39,19 +39,11 @@ const SocialMediaLinksContainer = styled.div`
 `;
 
 export default function SocialMediaLinks(): JSX.Element {
-  const githublink = "https://github.com/agiamona/";
-  const linkedInLink = "https://www.linkedin.com/in/ashleygiamona248/";
-
-  return (
-    <SocialMediaLinksContainer>
-      <SocialLink href={githublink} target="_blank">
-        <FontAwesomeIcon icon={faGithub} />
-        GitHub
-      </SocialLink>
-      <SocialLink href={linkedInLink} target="_blank">
-        <FontAwesomeIcon icon={faLinkedin} />
-        LinkedIn
-      </SocialLink>
-    </SocialMediaLinksContainer>
-  );
+  const links = SocialLinkItems.map((item: ILink) => (
+    <SocialLink href={item.href} target="_blank" key={item.href}>
+      {item.icon ? <FontAwesomeIcon icon={item.icon} /> : null}
+      {item.title}
+    </SocialLink>
+  ));
+  return <SocialMediaLinksContainer>{links}</SocialMediaLinksContainer>;
 }

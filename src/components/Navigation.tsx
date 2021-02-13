@@ -1,12 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithubSquare,
-  faLinkedin,
-  IconDefinition,
-} from "@fortawesome/free-brands-svg-icons";
 import { Menu, StyledNav } from "./NavigationStyles";
-import { NavigationItems } from "../assets/NavigationData";
+import { NavigationItems, SocialLinkItems } from "../assets/NavigationData";
 import MenuItem from "./MenuItem";
 
 interface INavigation {
@@ -18,43 +12,18 @@ interface INavigation {
 export default function Navigation(props: INavigation): JSX.Element {
   const { viewMobileMenu, mobileBreakpoint, toggleMobileMenu } = props;
 
-  const navigationMenuItems = NavigationItems.map((item) => (
+  const allMenuItems = NavigationItems.concat(SocialLinkItems);
+  const navigationMenuItems = allMenuItems.map((item) => (
     <MenuItem
       key={item.href}
       href={item.href}
       title={item.title}
+      icon={item.icon}
       mobileBreakpoint={mobileBreakpoint}
       viewMobileMenu={viewMobileMenu}
       toggleMobileMenu={toggleMobileMenu}
     />
   ));
-
-  const geticon = (icon: IconDefinition): JSX.Element => {
-    return <FontAwesomeIcon icon={icon} size={viewMobileMenu ? "2x" : "1x"} />;
-  };
-
-  navigationMenuItems.push(
-    <MenuItem
-      key="https://github.com/agiamona/"
-      href="https://github.com/agiamona/"
-      title=""
-      mobileBreakpoint={mobileBreakpoint}
-      viewMobileMenu={viewMobileMenu}
-      toggleMobileMenu={toggleMobileMenu}
-      icon={geticon(faGithubSquare)}
-    />
-  );
-  navigationMenuItems.push(
-    <MenuItem
-      key="https://www.linkedin.com/in/ashleygiamona248/"
-      href="https://www.linkedin.com/in/ashleygiamona248/"
-      title=""
-      mobileBreakpoint={mobileBreakpoint}
-      viewMobileMenu={viewMobileMenu}
-      toggleMobileMenu={toggleMobileMenu}
-      icon={geticon(faLinkedin)}
-    />
-  );
 
   return (
     <>

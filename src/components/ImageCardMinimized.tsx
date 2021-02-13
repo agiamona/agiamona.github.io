@@ -1,5 +1,4 @@
 import React from "react";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -26,7 +25,7 @@ export default function ImageCardMinimized(props: {
         <Heading>{title}</Heading>
         <Tagline>{tagline}</Tagline>
         <ExpandIcon onClick={onClick}>
-          More <FontAwesomeIcon icon={faAngleRight} />
+          More <FontAwesomeIcon icon={["fas", "angle-right"]} />
         </ExpandIcon>
       </DetailsContainer>
     </CardSubContainer>

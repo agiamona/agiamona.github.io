@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
 
 const ListContainer = styled.ul`
   list-style: none;
@@ -30,7 +29,7 @@ export default function List(props: IList): JSX.Element {
   const listItems = items.map((item, index) => (
     <ListItem key={index} narrow={narrow}>
       <BulletContainer>
-        <FontAwesomeIcon icon={faAngleDoubleRight} />
+        <FontAwesomeIcon icon={["fas", "angle-double-right"]} />
       </BulletContainer>
       {item}
     </ListItem>

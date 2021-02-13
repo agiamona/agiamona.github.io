@@ -13,6 +13,9 @@ const Heading = styled.h3`
 
 const CardBackground = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
+  filter: drop-shadow(
+    0.15em 0.25em 0.15em ${({ theme }) => theme.colors.shodows}
+  );
   text-align: left;
   width: 17em;
   padding: 1em 3em;
