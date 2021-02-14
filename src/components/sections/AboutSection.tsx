@@ -10,7 +10,7 @@ const StyledText = styled.p<{ mobile?: string }>`
   margin: auto;
 
   ${(props) => props.mobile} {
-    width: 80%;
+    width: 100%;
   }
 `;
 StyledText.defaultProps = {

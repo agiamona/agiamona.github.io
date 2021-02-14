@@ -1,12 +1,14 @@
 {
   "landing": {
     "title": "Software Engineer Experienced in Full Stack Web Development",
-    "subtitle": "Passionate about crafting postive user experiences and solving problems through end-to-end solutions with clean code that is maintainable, efficient, and well-tested."
+    "subtitle": "Passionate about crafting positive user experiences and solving problems through end-to-end solutions with clean code that is maintainable, efficient, and well-tested."
   },
   "aboutMe": [
     "Hi, I’m Ashley Elena Giamona!",
-    "A Software Engineer with demonstrated experience in full-stack web development and end-to-end solutions. Passionate about solving real business problems with clean, reusable code that is maintainable, and efficient and well tested. Experienced with object-oriented programming and functional programming paradigms.",
-    "Excited to solve the unique problems faced on the frontend to successfully present information to users in an intuitive and aesthetically pleasing manner. Utilizes interest in the principles of art and usability to create positive user experiences across devices large and small. Familiar with all phases of the design process, from personas and wireframes to implementing production ready software. Loves the challenges that pertain to the backend to process data efficiently for frontend consumption and long-term storage in the database. As well as keeping data secure and safe from unauthorized access."
+    "Software Engineer with 1 year of full stack experience on a web application in production and taking ownership of end-to-end solutions (from design to deployment). Over 5 years of overall experience through education and projects.",
+    "A lifelong learner that is passionate about designing aesthetically pleasing and intuitive user interfaces cross all platforms and solving problems with high quality code that is reusable, maintainable, and well-tested. Experienced with object-oriented programming and functional programming paradigms. I am also familiar with all phases of the design process, from personas and wireframes to implementing production ready software.",
+    "In every project I work on, speed, stability, and intuitiveness are high priorities. It’s thrilling to solve the unique problems faced on the frontend to successfully present information to users in an intuitive and aesthetically pleasing manner. It is well documented that users lose interest when pages take too long to load, or they cannot find what they are looking for quickly. In all my designs, I consider the usability impact on users as well as the digestibility the information is presented. I also love the challenges that pertain to the backend to process data efficiently for frontend consumption and long-term storage in the database. As well as keeping data secure and safe from unauthorized access.",
+    "In my free time, you can find me hanging out with my dogs and working on my latest hobby!"    
   ],
   "contact": {
     "notSubmitted": "I would love to hear from you and learn about your project needs and business goals. Please complete the form below to get started.",
@@ -57,41 +59,79 @@
   ],
   "projects": [
     {
-      "title": "Project A",
-      "tagline": "Tagline for project A",
-      "detailsList": ["Skill 1", "Skill 2", "Skill 3"],
-      "description": "A description of project A. What the problem was and how it was solved.",
-      "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
-      "thumbnailAlt": "Screenshot of Project A's Homepage",
-      "liveSite": "http://www.google.com",
-      "sourceCode": "http://www.github.com",
+      "title": "Tutoria",
+      "tagline": "Nonprofit's React and Ruby with Postgres web app.",
+      "detailsList": [
+        "Analyze and test existing system functionality in React frontend and Ruby on Rails with PostgreSQL backend to discover and fix defects to increase overall code quality.",
+        "Develop and document new system requirements that expand or alter system’s functionality using an Agile process to coordinate with management and dev team",
+        "Re-engineer appearance and responsiveness of reusable User Interface components to improve user experience across devices (from mobile to desktop) using Figma for mockups.",
+        "Independently complete tasks, conduct research, and learn new skills rapidly to ship high quality iterations while communicating with team consistently."
+        ],
+      "description": "Tutoria is a nonprofit that connects knowledge seekers with volunteer tutors that help them achieve their education goals. Clients and volunteers can sign up, set their availability, find and communicate with each other through the app.",
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613273897/Tutoria-screenshot_ociwqh.png",
+      "thumbnailAlt": "Screenshot of Tutoria's web application",
+      "liveSite": "http://tutoria.io",
       "dates": {
         "start": "Mar 2020",
-        "end": "Dec 2020"
+        "end": "Present"
       }
     },
     {
-      "title": "Project B",
-      "tagline": "Tagline for project B.",
-      "detailsList": ["Skill 1", "Skill 2", "Skill 3"],
-      "description": "A description of project B. What the problem was and how it was solved.",
-      "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
-      "thumbnailAlt": "Screenshot of Project B's Homepage",
-      "liveSite": "http://www.google.com",
-      "sourceCode": "",
+      "title": "FieldDay",
+      "tagline": "React web app, Node API server, and Android mobile app for research team",
+      "detailsList": [
+        "Extracted and finalized system requirements through consultations with the client and development team using an Agile Scrum process.",
+        "Engineered new functionality based on new system requirements for the React frontend to increase users’ ability to access and manage their data.",
+        "Designed and implemented the backend as a Restful API for synchronization of data access and management using JavaScript, Node, and MySQL.",
+        "Implemented UI and data processing functionality in native Android app to enable data synchronization with the backend."
+        ],
+      "description": "Web and mobile applications for Wildlife Research team that featured user customizable forms for data collection in remote locations with no internet connection to allow research team to record and validate their data digitally in the field and synchronize it with central system when online.",
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613280296/FieldDay-screenshot_y0bsx9.png",
+      "thumbnailAlt": "Image of the FieldDay applications",
       "dates": {
-        "start": "Jan 2020"
+        "start": "Sep 2018",
+        "end": "May 2019"
       }
     },
     {
-      "title": "Project C",
-      "tagline": "Tagline for project C.",
-      "detailsList": ["Skill 1", "Skill 2", "Skill 3"],
+      "title": "This Portfolio",
+      "tagline": "Utilized modern frontend tech to create",
+      "detailsList": [
+        "Business needs were converted to mockup in Figma to produce a modern aesthetic and design",
+        "Engineered using React, TypeScript, and CSS-In-JS (Styled Components)",
+        "Uses Modern React practices (including Hooks and functional components)"
+      ],
+      "description": "This portfolio was created using modern frontend technology to create a digital portfolio that is extendable and easily adaptable in the future.",
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613283786/portfolio-screenshot_eurl8s.png",
+      "thumbnailAlt": "Screenshot of this portfolio page",
+      "liveSite": "https://agiamona.github.io/",
+      "sourceCode": "https://github.com/agiamona/agiamona.github.io"
+    },
+    {
+      "title": "Community Helper",
+      "tagline": "React prototype for system offering community services",
+      "detailsList": [
+        "Translated requirements to functional React prototype to simulate the user experience of registration, logging in/out, and browsing.",
+        "Applied responsive design principles to create positive user experiences across desktop and mobile devices."
+      ],
+      "description": "Converted list of business needs to technical requirements, which were then implemented as a React prototype to allow users to register, browse, and signup for services.",
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613281830/Community_Helper_-_screenshot_loyb7a.png",
+      "thumbnailAlt": "Screenshot of Community Helper's homepage",
+      "liveSite": "https://agiamona.github.io/community-helper/",
+      "sourceCode": "https://github.com/agiamona/community-helper"
+    },
+    {
+      "title": "Chihuahua Enthusiast",
+      "tagline": "Chihuahua breed informational page utilizing HTML, CSS, and JavaScript",
+      "detailsList": [
+        "Fully mobile responsive single page application using HTML, CSS, and Vaniila JavaScript.", 
+        "Utilized parallax scrolling effect to provide a more engaging experience."
+      ],
       "description": "A description of project C. What the problem was and how it was solved.",
-      "thumbnail": "https://res.cloudinary.com/amaranthnebula/image/upload/v1612760106/portfolio/placeholder.png",
-      "thumbnailAlt": "Screenshot of Project C's Homepage",
-      "liveSite": "",
-      "sourceCode": "http://www.github.com"
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613281340/chihuahua-enthusiast-screenshot_qi46oy.png",
+      "thumbnailAlt": "Screenshot of Chihuahua Enthusiast Homepage",
+      "liveSite": "https://agiamona.github.io/chihuahua-enthusiast/",
+      "sourceCode": "https://github.com/agiamona/chihuahua-enthusiast"
     }
   ]
 }

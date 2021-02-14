@@ -25,7 +25,7 @@ export default function ImageCardMinimized(props: {
         <Heading>{title}</Heading>
         <Tagline>{tagline}</Tagline>
         <ExpandIcon onClick={onClick}>
-          More <FontAwesomeIcon icon={["fas", "angle-right"]} />
+          More Info <FontAwesomeIcon icon={["fas", "angle-right"]} />
         </ExpandIcon>
       </DetailsContainer>
     </CardSubContainer>

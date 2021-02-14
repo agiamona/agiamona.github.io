@@ -59,7 +59,7 @@ export default function ImageCardExpanded(props: {
         <LargeThumbnail alt={thumbnailAlt} src={thumbnail} />
         <LinksContainer mobile={breakpoints.projectMobile}>
           {liveSite && liveSite.length > 0 ? (
-            <ExternalLink url={liveSite} name="Live Site" />
+            <ExternalLink url={liveSite} name="Visit Site" />
           ) : null}
           {sourceCode && sourceCode.length > 0 ? (
             <ExternalLink url={sourceCode} name="Source Code" />

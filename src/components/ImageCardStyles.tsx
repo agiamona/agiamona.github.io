@@ -100,6 +100,7 @@ export const SubHeading = styled.h4`
 `;
 
 export const LargeThumbnail = styled.img`
+  border: solid 1px ${({ theme }) => theme.colors.borders};
   width: 90%;
 `;
 
@@ -119,6 +120,7 @@ export const Tagline = styled.p`
 `;
 
 export const Thumbnail = styled.img`
+  border: solid 1px ${({ theme }) => theme.colors.borders};
   height: 9em;
   width: 16em;
 `;

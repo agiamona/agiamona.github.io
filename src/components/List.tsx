@@ -9,7 +9,7 @@ const ListContainer = styled.ul`
 `;
 
 const ListItem = styled.li<{ narrow?: boolean }>`
-  padding: ${(props) => (props.narrow ? "0" : "0.5em 0em")};
+  padding: ${(props) => (props.narrow ? "0.2em 0em" : "0.5em 0em")};
   display: flex;
   align-items: flex-start;
 `;
