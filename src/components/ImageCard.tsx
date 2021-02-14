@@ -3,6 +3,7 @@ import { CardContainer } from "./ImageCardStyles";
 import ImageCardMinimized from "./ImageCardMinimized";
 import ImageCardExpanded from "./ImageCardExpanded";
 import IProject from "./IProject";
+import { breakpoints } from "../styles/breakpoints";
 
 export default function ImageCard(props: { project: IProject }): JSX.Element {
   const [expand, setExpand] = useState(false);
@@ -31,6 +32,7 @@ export default function ImageCard(props: { project: IProject }): JSX.Element {
       ref={cardRef}
       onClick={expand ? undefined : toggleExpand}
       expand={expand}
+      columns={breakpoints.projectMobile}
     >
       {expand ? expandedCard : minimizedCard}
     </CardContainer>

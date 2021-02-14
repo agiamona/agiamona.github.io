@@ -14,6 +14,7 @@ import {
 import List from "./List";
 
 import IProject from "./IProject";
+import { breakpoints } from "../styles/breakpoints";
 
 export default function ImageCardExpanded(props: {
   project: IProject;
@@ -56,7 +57,7 @@ export default function ImageCardExpanded(props: {
       </CloseButton>
       <CardSubContainer centered>
         <LargeThumbnail alt={thumbnailAlt} src={thumbnail} />
-        <LinksContainer>
+        <LinksContainer mobile={breakpoints.projectMobile}>
           {liveSite && liveSite.length > 0 ? (
             <ExternalLink url={liveSite} name="Live Site" />
           ) : null}

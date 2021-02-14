@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { breakpoints } from "../styles/breakpoints";
 
-const StyledLink = styled.a`
+const StyledLink = styled.a<{ mobile: string }>`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.foreground};
   font-weight: bold;
@@ -18,6 +19,11 @@ const StyledLink = styled.a`
   & sup {
     font-size: 0.7em;
   }
+
+  ${(props) => props.mobile} {
+    display: block;
+    padding-bottom: 1em;
+  }
 `;
 
 export default function ExternalLink(props: {
@@ -27,7 +33,11 @@ export default function ExternalLink(props: {
   const { url, name } = props;
 
   return (
-    <StyledLink href={url} target="_blank">
+    <StyledLink
+      mobile={breakpoints.projectMiniMobile}
+      href={url}
+      target="_blank"
+    >
       {name}
       <sup>
         <FontAwesomeIcon icon="external-link-alt" />

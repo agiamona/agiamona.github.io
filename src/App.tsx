@@ -19,7 +19,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/GlobalStyles";
 
 import Header from "./components/Header";
-import Landing from "./components/Landing";
+import Landing from "./components/sections/Landing";
 import { lightTheme } from "./styles/themes";
 import data from "./assets/data.json";
 import AboutSection from "./components/sections/AboutSection";

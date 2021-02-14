@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavigationItems, SocialLinkItems } from "../assets/NavigationData";
+import { breakpoints } from "../styles/breakpoints";
 
-export const StyledFooter = styled.footer`
+export const StyledFooter = styled.footer<{ mobile?: string }>`
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.foreground};
   width: 1005;
@@ -11,9 +12,20 @@ export const StyledFooter = styled.footer`
   min-height: 14em;
   position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  ${(props) => props.mobile} {
+    flex-direction: column;
+    padding-bottom: 2em;
+    min-height: 18em;
+  }
 `;
+
+StyledFooter.defaultProps = {
+  mobile: breakpoints.defaultNoMobile,
+};
 
 export const PlainList = styled.ul`
   list-style: none;
@@ -33,7 +45,7 @@ export const StyledLink = styled.a`
     color: ${({ theme }) => theme.colors.borders};
   }
 
-  & > svg {
+  & ${this} svg {
     margin-right: 0.5em;
   }
 `;
@@ -61,11 +73,13 @@ export default function Footer(): JSX.Element {
   ));
 
   return (
-    <StyledFooter>
+    <StyledFooter mobile={breakpoints.footerMobile}>
       <PlainList>{navItems}</PlainList>
       <PlainList>{socialItems}</PlainList>
 
-      <CopyrightLabel>Copyright &copy Ashley Elena Giamona 2021</CopyrightLabel>
+      <CopyrightLabel>
+        Copyright &copy; Ashley Elena Giamona 2021
+      </CopyrightLabel>
     </StyledFooter>
   );
 }

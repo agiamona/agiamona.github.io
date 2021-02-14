@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { breakpoints } from "../styles/breakpoints";
 
-export const CardContainer = styled.div<{ expand: boolean }>`
+export const CardContainer = styled.div<{ expand: boolean; columns?: string }>`
   background-color: ${({ theme }) => theme.colors.background};
   filter: drop-shadow(
     0.15em 0.25em 0.15em ${({ theme }) => theme.colors.shodows}
@@ -15,7 +16,17 @@ export const CardContainer = styled.div<{ expand: boolean }>`
   flex-wrap: nowrap;
   margin: 1em;
   transition: all 0.1s ease-in;
+
+  ${(props) => props.columns} {
+    flex-direction: column;
+    padding-top: ${(props) => (props.expand ? "4em" : "0")};
+    padding-bottom: ${(props) => (props.expand ? "4em" : "0")};
+  }
 `;
+
+CardContainer.defaultProps = {
+  columns: breakpoints.defaultNoMobile,
+};
 
 export const CardSubContainer = styled.div<{ centered?: boolean }>`
   width: 100%;
@@ -92,8 +103,13 @@ export const LargeThumbnail = styled.img`
   width: 90%;
 `;
 
-export const LinksContainer = styled.div`
+export const LinksContainer = styled.div<{ mobile: string }>`
   margin-top: 0.5em;
+
+  ${(props) => props.mobile} {
+    padding-bottom: 1em;
+    text-align: center;
+  }
 `;
 
 export const Tagline = styled.p`

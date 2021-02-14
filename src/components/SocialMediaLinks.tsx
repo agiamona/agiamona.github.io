@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SocialLinkItems, ILink } from "../assets/NavigationData";
+import { breakpoints } from "../styles/breakpoints";
 
-const SocialLink = styled.a`
+const SocialLink = styled.a<{ mobile: string }>`
   background-color: ${({ theme }) => theme.colors.foreground};
   color: ${({ theme }) => theme.colors.background};
   border: 3px solid ${({ theme }) => theme.colors.foreground};
@@ -23,8 +24,12 @@ const SocialLink = styled.a`
     color: ${({ theme }) => theme.colors.foreground};
   }
 
-  & svg {
+  & ${this} svg {
     margin-right: 0.3em;
+  }
+
+  ${(props) => props.mobile} {
+    font-size: 1em;
   }
 `;
 
@@ -40,7 +45,12 @@ const SocialMediaLinksContainer = styled.div`
 
 export default function SocialMediaLinks(): JSX.Element {
   const links = SocialLinkItems.map((item: ILink) => (
-    <SocialLink href={item.href} target="_blank" key={item.href}>
+    <SocialLink
+      mobile={breakpoints.contactMobile}
+      href={item.href}
+      target="_blank"
+      key={item.href}
+    >
       {item.icon ? <FontAwesomeIcon icon={item.icon} /> : null}
       {item.title}
     </SocialLink>
