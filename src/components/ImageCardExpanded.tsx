@@ -30,6 +30,7 @@ export default function ImageCardExpanded(props: {
     description,
     detailsList,
     dates,
+    tech,
   } = project;
 
   const dateString = (): string => {
@@ -70,6 +71,8 @@ export default function ImageCardExpanded(props: {
       <CardSubContainer>
         <Heading>{title}</Heading>
         <DateText>{dateString()}</DateText>
+        <SubHeading>Main Tech</SubHeading>
+        <Description>{tech}</Description>
         <SubHeading>Description</SubHeading>
         <Description>{description}</Description>
         <SubHeading>Details</SubHeading>

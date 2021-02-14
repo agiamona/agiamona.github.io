@@ -3,6 +3,7 @@ export default interface IProject {
   tagline: string;
   detailsList: string[];
   description: string;
+  tech: string;
   thumbnail: string;
   thumbnailAlt: string;
   liveSite?: string;

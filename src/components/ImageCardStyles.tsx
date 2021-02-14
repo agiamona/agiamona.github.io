@@ -20,7 +20,7 @@ export const CardContainer = styled.div<{ expand: boolean; columns?: string }>`
   ${(props) => props.columns} {
     flex-direction: column;
     padding-top: ${(props) => (props.expand ? "4em" : "0")};
-    padding-bottom: ${(props) => (props.expand ? "4em" : "0")};
+    padding-bottom: ${(props) => (props.expand ? "4em" : "1.5em")};
   }
 `;
 

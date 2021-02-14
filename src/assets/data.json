@@ -6,8 +6,8 @@
   "aboutMe": [
     "Hi, I’m Ashley Elena Giamona!",
     "Software Engineer with 1 year of full stack experience on a web application in production and taking ownership of end-to-end solutions (from design to deployment). Over 5 years of overall experience through education and projects.",
-    "A lifelong learner that is passionate about designing aesthetically pleasing and intuitive user interfaces cross all platforms and solving problems with high quality code that is reusable, maintainable, and well-tested. Experienced with object-oriented programming and functional programming paradigms. I am also familiar with all phases of the design process, from personas and wireframes to implementing production ready software.",
-    "In every project I work on, speed, stability, and intuitiveness are high priorities. It’s thrilling to solve the unique problems faced on the frontend to successfully present information to users in an intuitive and aesthetically pleasing manner. It is well documented that users lose interest when pages take too long to load, or they cannot find what they are looking for quickly. In all my designs, I consider the usability impact on users as well as the digestibility the information is presented. I also love the challenges that pertain to the backend to process data efficiently for frontend consumption and long-term storage in the database. As well as keeping data secure and safe from unauthorized access.",
+    "A lifelong learner that is passionate about designing aesthetically pleasing and intuitive user interfaces across all platforms and solving problems with high quality code that is reusable, maintainable, and well-tested. Experienced with object-oriented programming and functional programming paradigms. I am also familiar with all phases of the design process, from personas and wireframes to implementing production ready software.",
+    "In every project I work on, speed, stability, and intuitiveness are high priorities. It’s thrilling to solve the unique problems faced on the frontend to successfully present information to users in an intuitive and aesthetically pleasing manner. It is well documented that users lose interest when pages take too long to load, or they cannot find what they are looking for quickly. In all my designs, I consider the usability impact on users and how easliy the information can be digested. I also love the challenges that pertain to the backend to process data efficiently for frontend consumption and long-term storage in the database, as well as keeping data secure and safe from unauthorized access.",
     "In my free time, you can find me hanging out with my dogs and working on my latest hobby!"    
   ],
   "contact": {
@@ -60,6 +60,7 @@
   "projects": [
     {
       "title": "Tutoria",
+      "tech": "React.js, JavaScript, Ruby on Rails, HTML, SCSS, PostresSQL, and AWS",
       "tagline": "Nonprofit's React and Ruby with Postgres web app.",
       "detailsList": [
         "Analyze and test existing system functionality in React frontend and Ruby on Rails with PostgreSQL backend to discover and fix defects to increase overall code quality.",
@@ -78,6 +79,7 @@
     },
     {
       "title": "FieldDay",
+      "tech": "React.js, Material-UI, Node.js, JavaScript, Android, Java, MySQL, and AWS",
       "tagline": "React web app, Node API server, and Android mobile app for research team",
       "detailsList": [
         "Extracted and finalized system requirements through consultations with the client and development team using an Agile Scrum process.",
@@ -94,7 +96,8 @@
       }
     },
     {
-      "title": "This Portfolio",
+      "title": "My Portfolio",
+      "tech": "React.js, TypeScript, JavaScript, HTML, CSS, CSS-In-JSS, and Styled Components",
       "tagline": "Utilized modern frontend tech to create",
       "detailsList": [
         "Business needs were converted to mockup in Figma to produce a modern aesthetic and design",
@@ -109,6 +112,7 @@
     },
     {
       "title": "Community Helper",
+      "tech": "React.js, JavaScript, HTML, and CSS",
       "tagline": "React prototype for system offering community services",
       "detailsList": [
         "Translated requirements to functional React prototype to simulate the user experience of registration, logging in/out, and browsing.",
@@ -122,6 +126,7 @@
     },
     {
       "title": "Chihuahua Enthusiast",
+      "tech": "HTML, CSS, and JavaScript",
       "tagline": "Chihuahua breed informational page utilizing HTML, CSS, and JavaScript",
       "detailsList": [
         "Fully mobile responsive single page application using HTML, CSS, and Vaniila JavaScript.", 
