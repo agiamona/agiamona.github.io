@@ -91,6 +91,7 @@ export default function ContactForm(props: {
         id="name"
         name="name"
         placeholder="Name*"
+        aria-label="Name"
         value={formData.name}
         onChange={handleChange}
         required
@@ -100,6 +101,7 @@ export default function ContactForm(props: {
         id="email"
         name="email"
         placeholder="Email*"
+        aria-label="Email"
         value={formData.email}
         onChange={handleChange}
         required
@@ -109,6 +111,7 @@ export default function ContactForm(props: {
         id="subject"
         name="subject"
         placeholder="Subject*"
+        aria-label="Subject"
         value={formData.subject}
         onChange={handleChange}
         required
@@ -119,11 +122,17 @@ export default function ContactForm(props: {
         rows={6}
         cols={50}
         placeholder="Message*"
+        aria-label="Message"
         value={formData.message}
         onChange={handleChange}
         required
       />
-      <SubmitButton type="submit" value="Submit" />
+      <SubmitButton
+        type="submit"
+        value="Submit"
+        name="Submit"
+        aria-label="Submit"
+      />
     </Form>
   );
 }

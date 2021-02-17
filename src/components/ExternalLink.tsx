@@ -37,6 +37,7 @@ export default function ExternalLink(props: {
       mobile={breakpoints.projectMiniMobile}
       href={url}
       target="_blank"
+      rel="noreferrer"
     >
       {name}
       <sup>

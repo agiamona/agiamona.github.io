@@ -49,6 +49,7 @@ export default function SocialMediaLinks(): JSX.Element {
       mobile={breakpoints.contactMobile}
       href={item.href}
       target="_blank"
+      rel="noreferrer"
       key={item.href}
     >
       {item.icon ? <FontAwesomeIcon icon={item.icon} /> : null}

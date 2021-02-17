@@ -20,6 +20,10 @@ export const StyledFooter = styled.footer<{ mobile?: string }>`
     flex-direction: column;
     padding-bottom: 2em;
     min-height: 18em;
+
+    & ${this} a {
+      font-size: 1.5em;
+    }
   }
 `;
 
@@ -65,7 +69,7 @@ export default function Footer(): JSX.Element {
   ));
   const socialItems = SocialLinkItems.map((item) => (
     <li key={item.href}>
-      <StyledLink href={item.href} target="_blank">
+      <StyledLink href={item.href} target="_blank" rel="noreferrer">
         {item.icon ? <FontAwesomeIcon icon={item.icon} /> : null}
         {item.title}
       </StyledLink>

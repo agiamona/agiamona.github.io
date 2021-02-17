@@ -13,6 +13,7 @@ export const Link = styled.a<{ mobileBreakpoint: string }>`
   }
 
   ${(props) => props.mobileBreakpoint} {
+    font-size: 2em;
     & ${this} svg {
       font-size: 2em;
     }

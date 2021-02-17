@@ -31,10 +31,13 @@ const FormIntroContainer = styled.div`
   margin-bottom: 2em;
 `;
 
-const SubSection = styled.h5`
+const OtherPlacesContainer = styled.div`
+  margin-top: 3em;
+`;
+
+const SubSection = styled.h3`
   color: ${({ theme }) => theme.colors.foreground};
   margin-bottom: 1em;
-  margin-top: 3em;
   font-size: 1.2em;
 `;
 
@@ -78,13 +81,16 @@ export default function ContactSection(props: {
     <Section title="Contact Me" id="contact" transparent>
       <FormContainer>
         <FormIntroContainer>
+          <SubSection>Contact Form</SubSection>
           <FormIntro>{contact[result()]}</FormIntro>
         </FormIntroContainer>
         {result() === NOT_SUBMITTED ? (
           <ContactForm onSubmit={handleSubmit} />
         ) : null}
-        <SubSection>You can also find me at the following places:</SubSection>
-        <SocialMediaLinks />
+        <OtherPlacesContainer>
+          <SubSection>You can also find me at the following places:</SubSection>
+          <SocialMediaLinks />
+        </OtherPlacesContainer>
       </FormContainer>
     </Section>
   );

@@ -50,7 +50,11 @@ export default function Header(): JSX.Element {
         toggleMobileMenu={toggleMobileMenu}
         mobileBreakpoint={mobileMenu}
       />
-      <MobileMenu mobileBreakpoint={mobileMenu} onClick={toggleMobileMenu}>
+      <MobileMenu
+        aria-label={viewMobileMenu ? "Close Menu" : "Open Menu"}
+        mobileBreakpoint={mobileMenu}
+        onClick={toggleMobileMenu}
+      >
         <FontAwesomeIcon
           icon={viewMobileMenu ? ["fas", "times"] : ["fas", "bars"]}
         />
