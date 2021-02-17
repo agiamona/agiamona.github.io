@@ -98,7 +98,7 @@
     {
       "title": "My Portfolio",
       "tech": "React.js, TypeScript, JavaScript, HTML, CSS, CSS-In-JSS, and Styled Components",
-      "tagline": "Utilized modern frontend tech to create",
+      "tagline": "Utilized modern frontend tech to display my work",
       "detailsList": [
         "Business needs were converted to mockup in Figma to produce a modern aesthetic and design",
         "Engineered using React, TypeScript, and CSS-In-JS (Styled Components)",

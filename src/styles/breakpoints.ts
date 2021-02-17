@@ -1,12 +1,23 @@
-const breakpoint = (bp: string): string => `@media (max-width: ${bp})`;
+export const maxPixels = {
+  defaultNoMobile: 0,
+  mobileMenu: 755,
+  projectMobile: 700,
+  projectMiniMobile: 420,
+  landingMobile: 600,
+  aboutMeMobile: 800,
+  footerMobile: 600,
+  contactMobile: 400,
+};
+
+const breakpoint = (bp: number): string => `@media (max-width: ${bp}px)`;
 
 export const breakpoints = {
-  defaultNoMobile: breakpoint("0px"),
-  mobileMenu: breakpoint("755px"),
-  projectMobile: breakpoint("700px"),
-  projectMiniMobile: breakpoint("420px"),
-  landingMobile: breakpoint("600px"),
-  aboutMeMobile: breakpoint("800px"),
-  footerMobile: breakpoint("600px"),
-  contactMobile: breakpoint("400px"),
+  defaultNoMobile: breakpoint(maxPixels.defaultNoMobile),
+  mobileMenu: breakpoint(maxPixels.mobileMenu),
+  projectMobile: breakpoint(maxPixels.projectMobile),
+  projectMiniMobile: breakpoint(maxPixels.projectMiniMobile),
+  landingMobile: breakpoint(maxPixels.landingMobile),
+  aboutMeMobile: breakpoint(maxPixels.aboutMeMobile),
+  footerMobile: breakpoint(maxPixels.footerMobile),
+  contactMobile: breakpoint(maxPixels.contactMobile),
 };

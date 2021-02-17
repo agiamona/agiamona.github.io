@@ -20,7 +20,6 @@ export default function Navigation(props: INavigation): JSX.Element {
       title={item.title}
       icon={item.icon}
       mobileBreakpoint={mobileBreakpoint}
-      viewMobileMenu={viewMobileMenu}
       toggleMobileMenu={toggleMobileMenu}
     />
   ));

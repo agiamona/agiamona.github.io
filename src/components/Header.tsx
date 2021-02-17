@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { breakpoints } from "../styles/breakpoints";
+import { breakpoints, maxPixels } from "../styles/breakpoints";
 
 import Logo from "./Logo";
 import Navigation from "./Navigation";
@@ -37,7 +37,9 @@ export default function Header(): JSX.Element {
   const [viewMobileMenu, setViewMobileMenu] = useState(false);
 
   const toggleMobileMenu = () => {
-    setViewMobileMenu((prevViewMobileMenu) => !prevViewMobileMenu);
+    setViewMobileMenu(
+      window.innerWidth > maxPixels.mobileMenu ? false : !viewMobileMenu
+    );
   };
 
   return (

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ExternalLink from "./ExternalLink";
 import {
   CardSubContainer,
-  LargeThumbnail,
+  Thumbnail,
   Heading,
   CloseButton,
   Description,
@@ -57,7 +57,13 @@ export default function ImageCardExpanded(props: {
         <FontAwesomeIcon icon="times" />
       </CloseButton>
       <CardSubContainer centered>
-        <LargeThumbnail alt={thumbnailAlt} src={thumbnail} />
+        <Thumbnail
+          alt={thumbnailAlt}
+          src={thumbnail}
+          height="144"
+          width="256"
+          responsiveSize
+        />
         <LinksContainer mobile={breakpoints.projectMobile}>
           {liveSite && liveSite.length > 0 ? (
             <ExternalLink url={liveSite} name="Visit Site" />

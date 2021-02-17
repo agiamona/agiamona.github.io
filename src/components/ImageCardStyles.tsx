@@ -15,7 +15,6 @@ export const CardContainer = styled.div<{ expand: boolean; columns?: string }>`
   flex-direction: row;
   flex-wrap: nowrap;
   margin: 1em;
-  transition: all 0.1s ease-in;
 
   ${(props) => props.columns} {
     flex-direction: column;
@@ -99,11 +98,6 @@ export const SubHeading = styled.h4`
   margin-top: 1em;
 `;
 
-export const LargeThumbnail = styled.img`
-  border: solid 1px ${({ theme }) => theme.colors.borders};
-  width: 90%;
-`;
-
 export const LinksContainer = styled.div<{ mobile: string }>`
   margin-top: 0.5em;
 
@@ -119,8 +113,12 @@ export const Tagline = styled.p`
   min-height: 3em;
 `;
 
-export const Thumbnail = styled.img`
+export const Thumbnail = styled.img<{ responsiveSize?: boolean }>`
   border: solid 1px ${({ theme }) => theme.colors.borders};
-  height: 9em;
-  width: 16em;
+  height: ${(props) => (props.responsiveSize ? "auto" : "9em")};
+  width: ${(props) => (props.responsiveSize ? "90%" : "16em")};
 `;
+
+Thumbnail.defaultProps = {
+  responsiveSize: false,
+};

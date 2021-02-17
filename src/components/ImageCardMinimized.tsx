@@ -20,7 +20,7 @@ export default function ImageCardMinimized(props: {
 
   return (
     <CardSubContainer>
-      <Thumbnail alt={thumbnailAlt} src={thumbnail} />
+      <Thumbnail alt={thumbnailAlt} src={thumbnail} height="144" width="256" />
       <DetailsContainer>
         <Heading>{title}</Heading>
         <Tagline>{tagline}</Tagline>

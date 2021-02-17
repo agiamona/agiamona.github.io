@@ -3,13 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core";
 
-export const Link = styled.a`
+export const Link = styled.a<{ mobileBreakpoint: string }>`
   font-weight: 900;
   text-decoration: none;
   font-size: 1.6em;
 
   &:hover {
     color: ${({ theme }) => theme.colors.borders};
+  }
+
+  ${(props) => props.mobileBreakpoint} {
+    & ${this} svg {
+      font-size: 2em;
+    }
   }
 `;
 
@@ -31,22 +37,21 @@ interface IMenuItem {
   href: string;
   title: string;
   mobileBreakpoint: string;
-  viewMobileMenu: boolean;
   toggleMobileMenu?: () => void;
   icon?: [IconPrefix, IconName];
 }
 
 const MenuItem = (item: IMenuItem): JSX.Element => {
-  const { viewMobileMenu, icon } = item;
+  const { icon } = item;
 
   return (
     <StyledLi mobileBreakpoint={item.mobileBreakpoint}>
-      <Link href={item.href} onClick={item.toggleMobileMenu}>
-        {icon ? (
-          <FontAwesomeIcon icon={icon} size={viewMobileMenu ? "2x" : "1x"} />
-        ) : (
-          item.title
-        )}
+      <Link
+        href={item.href}
+        onClick={item.toggleMobileMenu}
+        mobileBreakpoint={item.mobileBreakpoint}
+      >
+        {icon ? <FontAwesomeIcon icon={icon} /> : item.title}
       </Link>
     </StyledLi>
   );
