@@ -11,10 +11,10 @@ const SocialLink = styled.a<{ mobile: string }>`
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  font-size: 1.2em;
-  padding: 0.25em 0.5em;
+  font-size: 1.2rem;
+  padding: 0.25em 0.5rem;
   transition: all 0.1s ease-in;
-  margin: 0.5em;
+  margin: 0.5rem;
 
   &:visited {
     color: ${({ theme }) => theme.colors.background};
@@ -25,17 +25,17 @@ const SocialLink = styled.a<{ mobile: string }>`
   }
 
   & ${this} svg {
-    margin-right: 0.3em;
+    margin-right: 0.3rem;
   }
 
   ${(props) => props.mobile} {
-    font-size: 1em;
+    font-size: 1rem;
   }
 `;
 
 const SocialMediaLinksContainer = styled.div`
   width: 100%;
-  padding: 0 2em;
+  padding: 0 2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -52,7 +52,7 @@ export default function SocialMediaLinks(): JSX.Element {
       rel="noreferrer"
       key={item.href}
     >
-      {item.icon ? <FontAwesomeIcon icon={item.icon} /> : null}
+      {item.icon ? <FontAwesomeIcon icon={item.icon} aria-hidden /> : null}
       {item.title}
     </SocialLink>
   ));

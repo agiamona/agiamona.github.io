@@ -7,7 +7,7 @@ const StyledLink = styled.a<{ mobile: string }>`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.foreground};
   font-weight: bold;
-  margin: 0 1em;
+  margin: 0 1rem;
 
   &:hover {
     text-decoration: underline;
@@ -17,12 +17,12 @@ const StyledLink = styled.a<{ mobile: string }>`
     color: ${({ theme }) => theme.colors.foreground};
   }
   & sup {
-    font-size: 0.7em;
+    font-size: 0.7rem;
   }
 
   ${(props) => props.mobile} {
     display: block;
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
   }
 `;
 
@@ -41,7 +41,7 @@ export default function ExternalLink(props: {
     >
       {name}
       <sup>
-        <FontAwesomeIcon icon="external-link-alt" />
+        <FontAwesomeIcon icon="external-link-alt" aria-hidden />
       </sup>
     </StyledLink>
   );

@@ -8,8 +8,8 @@ export const StyledFooter = styled.footer<{ mobile?: string }>`
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.foreground};
   width: 1005;
-  padding-top: 1em;
-  min-height: 14em;
+  padding-top: 1rem;
+  min-height: 14rem;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -18,11 +18,11 @@ export const StyledFooter = styled.footer<{ mobile?: string }>`
 
   ${(props) => props.mobile} {
     flex-direction: column;
-    padding-bottom: 2em;
-    min-height: 18em;
+    padding-bottom: 2rem;
+    min-height: 18rem;
 
     & ${this} a {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
   }
 `;
@@ -33,7 +33,7 @@ StyledFooter.defaultProps = {
 
 export const PlainList = styled.ul`
   list-style: none;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-weight: bold;
 `;
 
@@ -50,13 +50,13 @@ export const StyledLink = styled.a`
   }
 
   & ${this} svg {
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
   }
 `;
 
 export const CopyrightLabel = styled.p`
   position: absolute;
-  bottom: 0.2em;
+  bottom: 0.2rem;
   width: 100%;
   text-align: center;
 `;
@@ -70,7 +70,7 @@ export default function Footer(): JSX.Element {
   const socialItems = SocialLinkItems.map((item) => (
     <li key={item.href}>
       <StyledLink href={item.href} target="_blank" rel="noreferrer">
-        {item.icon ? <FontAwesomeIcon icon={item.icon} /> : null}
+        {item.icon ? <FontAwesomeIcon icon={item.icon} aria-hidden /> : null}
         {item.title}
       </StyledLink>
     </li>

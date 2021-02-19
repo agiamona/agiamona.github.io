@@ -6,13 +6,14 @@ import { breakpoints, maxPixels } from "../styles/breakpoints";
 
 import Logo from "./Logo";
 import Navigation from "./Navigation";
+import { THEMES } from "../styles/themes";
 
 const HeaderWrap = styled.header`
   background: ${({ theme }) => theme.colors.background};
   width: 100%;
-  height: 5em;
+  height: 5rem;
   display: flex;
-  filter: drop-shadow(0 0.15em 0.2em ${({ theme }) => theme.colors.shodows});
+  border: 1px solid ${({ theme }) => theme.colors.borders};
   display: flex;
   justify-content: space-between;
   z-index: 100;
@@ -23,17 +24,24 @@ const MobileMenu = styled.button<{ mobileBreakpoint: string }>`
   display: none;
   border: none;
   background-color: transparent;
-  font-size: 3em;
+  font-size: 3rem;
 
   ${(props) => props.mobileBreakpoint} {
     display: inline;
-    margin: auto 0.3em;
+    margin: auto 0.3rem;
     z-index: 1000;
   }
 `;
 
-export default function Header(): JSX.Element {
+interface IHeader {
+  theme: {
+    current: THEMES;
+    onToggle: () => void;
+  };
+}
+export default function Header(props: IHeader): JSX.Element {
   const { mobileMenu } = breakpoints;
+  const { theme } = props;
   const [viewMobileMenu, setViewMobileMenu] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -49,6 +57,7 @@ export default function Header(): JSX.Element {
         viewMobileMenu={viewMobileMenu}
         toggleMobileMenu={toggleMobileMenu}
         mobileBreakpoint={mobileMenu}
+        theme={theme}
       />
       <MobileMenu
         aria-label={viewMobileMenu ? "Close Menu" : "Open Menu"}
@@ -57,6 +66,7 @@ export default function Header(): JSX.Element {
       >
         <FontAwesomeIcon
           icon={viewMobileMenu ? ["fas", "times"] : ["fas", "bars"]}
+          aria-hidden
         />
       </MobileMenu>
     </HeaderWrap>

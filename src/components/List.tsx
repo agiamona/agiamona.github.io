@@ -15,8 +15,8 @@ const ListItem = styled.li<{ narrow?: boolean }>`
 `;
 
 const BulletContainer = styled.span`
-  padding-top: 0.03em;
-  padding-right: 0.5em;
+  padding-top: 0.03rem;
+  padding-right: 0.5rem;
 `;
 
 interface IList {
@@ -29,7 +29,7 @@ export default function List(props: IList): JSX.Element {
   const listItems = items.map((item, index) => (
     <ListItem key={index} narrow={narrow}>
       <BulletContainer>
-        <FontAwesomeIcon icon={["fas", "angle-double-right"]} />
+        <FontAwesomeIcon icon={["fas", "angle-double-right"]} aria-hidden />
       </BulletContainer>
       {item}
     </ListItem>

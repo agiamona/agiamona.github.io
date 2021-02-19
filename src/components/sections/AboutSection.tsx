@@ -6,7 +6,7 @@ import Section from "../SectionComponent";
 const StyledText = styled.p<{ mobile?: string }>`
   text-align: center;
   width: 60%;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
   margin: auto;
 
   ${(props) => props.mobile} {

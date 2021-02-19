@@ -1,18 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import BackgroundImage from "../../assets/LandingPageBG.jpg";
 import { breakpoints } from "../../styles/breakpoints";
 
 const TitleHeading = styled.h2<{ mobile?: string }>`
-  color: ${({ theme }) => theme.colors.background};
+  text-shadow: 0 0 2px ${({ theme }) => theme.colors.textOutline},
+    0 0 2px ${({ theme }) => theme.colors.textOutline},
+    0 0 2px ${({ theme }) => theme.colors.textOutline},
+    0 0 2px ${({ theme }) => theme.colors.textOutline};
+  color: ${({ theme }) => theme.colors.transparentSection.heading};
   font-weight: 900;
   width: 60%;
   font-family: "Coda Caption", sans-serif;
-  font-size: 2.9em;
+  font-size: 2.9rem;
 
   ${(props) => props.mobile} {
     width: 100%;
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
 `;
 
@@ -21,14 +24,18 @@ TitleHeading.defaultProps = {
 };
 
 const SubTitleHeading = styled.p<{ mobile?: string }>`
-  color: ${({ theme }) => theme.colors.background};
+  text-shadow: 0 0 4px ${({ theme }) => theme.colors.textOutline},
+    0 0 4px ${({ theme }) => theme.colors.textOutline},
+    0 0 4px ${({ theme }) => theme.colors.textOutline},
+    0 0 4px ${({ theme }) => theme.colors.textOutline};
+  color: ${({ theme }) => theme.colors.transparentSection.heading};
   width: 60%;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   display: block;
 
   ${(props) => props.mobile} {
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
 `;
 
@@ -38,7 +45,7 @@ SubTitleHeading.defaultProps = {
 
 const LandingContainer = styled.section<{ mobile?: string }>`
   background: ${({ theme }) => theme.colors.backgroundDominant}
-    url(${BackgroundImage}) no-repeat top center fixed;
+    url(${({ theme }) => theme.colors.landingImage}) no-repeat top center fixed;
   min-height: 90vh;
   padding: 3em 0;
   text-align: center;
@@ -49,30 +56,32 @@ const LandingContainer = styled.section<{ mobile?: string }>`
   align-content: center;
 
   ${(props) => props.mobile} {
-    padding: 4em 0em;
-    padding-bottom: 6em;
+    padding: 4em 0rem;
+    padding-bottom: 6rem;
   }
 `;
 
 const HollowLinkButton = styled.a`
   background-color: transparent;
-  border: 3px solid ${({ theme }) => theme.colors.background};
-  color: ${({ theme }) => theme.colors.background};
+  border: 3px solid
+    ${({ theme }) => theme.colors.transparentSection.button.text};
+  color: ${({ theme }) => theme.colors.transparentSection.button.text};
   font-weight: 900;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.5rem;
   text-decoration: none;
   border-radius: 10px;
-  font-size: 1.2em;
-  margin-top: 4em;
+  font-size: 1.2rem;
+  margin-top: 4rem;
 
   transition: all 0.1s ease-in;
 
   &:visited {
-    color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.transparentSection.button.text};
   }
   &:hover {
-    background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.foreground};
+    background-color: ${({ theme }) => theme.colors.solidSection.button.bg};
+    border: 3px solid ${({ theme }) => theme.colors.solidSection.button.bg};
+    color: ${({ theme }) => theme.colors.solidSection.button.text};
   }
 `;
 

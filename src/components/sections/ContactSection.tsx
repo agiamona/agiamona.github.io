@@ -11,9 +11,9 @@ const FormContainer = styled.div`
     0.15em 0.25em 0.15em ${({ theme }) => theme.colors.shodows}
   );
   border-radius: 8px;
-  padding: 2em 3em;
-  max-width: 40em;
-  min-height: 20em;
+  padding: 2em 3rem;
+  max-width: 40rem;
+  min-height: 20rem;
   text-align: center;
   margin: auto;
 `;
@@ -21,24 +21,24 @@ const FormContainer = styled.div`
 const FormIntro = styled.p`
   width: 80%;
   margin: auto;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 `;
 
 const FormIntroContainer = styled.div`
   text-align: center;
   border-bottom: 1.5px solid ${({ theme }) => theme.colors.borders};
   width: 100%;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 `;
 
 const OtherPlacesContainer = styled.div`
-  margin-top: 3em;
+  margin-top: 3rem;
 `;
 
 const SubSection = styled.h3`
   color: ${({ theme }) => theme.colors.foreground};
-  margin-bottom: 1em;
-  font-size: 1.2em;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 `;
 
 enum FormResults {

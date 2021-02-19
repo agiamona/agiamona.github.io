@@ -5,10 +5,10 @@ import List from "./List";
 const Heading = styled.h3`
   color: ${({ theme }) => theme.colors.foreground};
   font-weight; 900;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   border-bottom: 1.5px solid ${({ theme }) => theme.colors.borders};
-  padding: 1em 0em;  
-  margin-bottom: 1em;
+  padding: 1em 0rem;  
+  margin-bottom: 1rem;
 `;
 
 const CardBackground = styled.div`
@@ -17,12 +17,12 @@ const CardBackground = styled.div`
     0.15em 0.25em 0.15em ${({ theme }) => theme.colors.shodows}
   );
   text-align: left;
-  width: 17em;
-  padding: 1em 3em;
-  padding-bottom: 3em;
+  width: 17rem;
+  padding: 1em 3rem;
+  padding-bottom: 3rem;
   text-align: center;
   border-radius: 10px;
-  margin: 2em;
+  margin: 2rem;
 `;
 
 const CardBody = styled.div`

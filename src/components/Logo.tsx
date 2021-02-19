@@ -5,8 +5,8 @@ const StyledHeading = styled.h1`
   font-family: "Coda Caption", sans-serif;
   text-align: right;
   font-weight: bold;
-  font-size: 1.6em;
-  padding: 0em 0.5em;
+  font-size: 1.6rem;
+  padding: 0em 0.5rem;
   z-index: 500;
 `;
 

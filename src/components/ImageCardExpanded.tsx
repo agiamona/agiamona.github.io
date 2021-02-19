@@ -54,7 +54,7 @@ export default function ImageCardExpanded(props: {
   return (
     <>
       <CloseButton aria-label="Close Project Details" onClick={onClick}>
-        <FontAwesomeIcon icon="times" />
+        <FontAwesomeIcon icon="times" aria-hidden />
       </CloseButton>
       <CardSubContainer centered>
         <Thumbnail

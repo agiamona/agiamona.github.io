@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import BackgroundImage from "../assets/milky_way_bg.jpg";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -15,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background: ${({ theme }) => theme.colors.backgroundDominant}
-      url(${BackgroundImage}) no-repeat center center fixed;
+      url(${({ theme }) => theme.colors.bgImage}) no-repeat center center fixed;
     background-size: cover;
   }
 

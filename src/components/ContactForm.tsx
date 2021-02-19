@@ -6,16 +6,16 @@ const Form = styled.form`
   flex-direction: column;
   justify-content: space-evenly;
   align-content: space-around;
-  min-height: 20em;
+  min-height: 20rem;
 `;
 
 const Input = styled.input`
   width: 100%;
-  font-size: 1em;
-  margin-bottom: 1em;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.colors.borders};
-  padding: 0.5em;
+  padding: 0.5rem;
   font-family: "Roboto Slab", Arial, sans-serif;
   border-radius: 5px;
 `;
@@ -24,10 +24,10 @@ const SubmitButton = styled.input`
   color: ${({ theme }) => theme.colors.background};
   background-color: ${({ theme }) => theme.colors.foreground};
   border: 3px solid ${({ theme }) => theme.colors.foreground};
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 8px;
-  padding: 0.3em 1em;
+  padding: 0.3em 1rem;
   margin: auto;
   font-family: "Roboto Slab", Arial, sans-serif;
   width: 100%;
@@ -44,9 +44,9 @@ const SubmitButton = styled.input`
 
 const TextArea = styled.textarea`
   width: 100%;
-  margin-bottom: 1em;
-  font-size: 1em;
-  padding 0.5em;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding 0.5rem;
   font-family: "Roboto Slab", Arial, sans-serif;
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.colors.borders};

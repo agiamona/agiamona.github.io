@@ -12,15 +12,21 @@ export const SubSectionContainer = styled.div`
 export const SectionContainer = styled.article<{ transparent: boolean }>`
   background-color: ${({ transparent, theme }) =>
     transparent ? "transparent" : theme.colors.background};
-  padding: 0 2em;
-  padding-bottom: 8em;
+  padding: 0 2rem;
+  padding-bottom: 8rem;
 `;
 
 export const SectionHeader = styled.h2<{ transparent: boolean }>`
   color: ${({ theme, transparent }) =>
-    transparent ? theme.colors.background : theme.colors.foreground};
-  padding: 1.5em;
-  padding-left: 3em;
-  border-bottom: 1.5px solid ${({ theme }) => theme.colors.borders};
-  margin-bottom: 3em;
+    transparent
+      ? theme.colors.transparentSection.heading
+      : theme.colors.solidSection.heading};
+  padding: 1.5rem;
+  padding-left: 3rem;
+  border-bottom: 1.5px solid
+    ${({ theme, transparent }) =>
+      transparent
+        ? theme.colors.transparentSection.borders
+        : theme.colors.solidSection.borders};
+  margin-bottom: 3rem;
 `;

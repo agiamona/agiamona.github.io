@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RouteComponentProps } from "@reach/router";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -20,7 +20,7 @@ import { GlobalStyles } from "./styles/GlobalStyles";
 
 import Header from "./components/Header";
 import Landing from "./components/sections/Landing";
-import { lightTheme } from "./styles/themes";
+import { THEMES, DarkTheme, LightTheme } from "./styles/themes";
 import data from "./assets/data.json";
 import AboutSection from "./components/sections/AboutSection";
 import SkillSection from "./components/sections/SkillSection";
@@ -38,13 +38,31 @@ library.add(
   faAngleRight,
   faAngleDoubleRight
 );
-
+const THEME_KEY = "THEME";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function App(props: RouteComponentProps): JSX.Element {
+  const [theme, setTheme] = useState(() => {
+    let selectedTheme = THEMES.DARK;
+
+    const themeStorage = window.localStorage.getItem(THEME_KEY);
+    if (themeStorage) {
+      selectedTheme =
+        themeStorage === THEMES.LIGHT ? THEMES.LIGHT : THEMES.DARK;
+    }
+
+    return selectedTheme;
+  });
+
+  const toggleTheme = () => {
+    const nextTheme = theme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK;
+    setTheme(nextTheme);
+    window.localStorage.setItem(THEME_KEY, nextTheme);
+  };
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={theme === THEMES.LIGHT ? LightTheme : DarkTheme}>
       <GlobalStyles />
-      <Header />
+      <Header theme={{ current: theme, onToggle: toggleTheme }} />
       <main>
         <Landing title={data.landing.title} subtitle={data.landing.subtitle} />
         <AboutSection text={data.aboutMe} />

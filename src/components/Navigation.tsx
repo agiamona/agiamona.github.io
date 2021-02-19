@@ -1,20 +1,26 @@
 import React from "react";
-import { Menu, StyledNav } from "./NavigationStyles";
+import { Menu, StyledNav, StyledLi } from "./NavigationStyles";
 import { NavigationItems, SocialLinkItems } from "../assets/NavigationData";
-import MenuItem from "./MenuItem";
+import NavMenuItem from "./NavMenuItem";
+import ModeToggle from "./ModeToggle";
+import { THEMES } from "../styles/themes";
 
 interface INavigation {
   viewMobileMenu: boolean;
   mobileBreakpoint: string;
   toggleMobileMenu: () => void;
+  theme: {
+    current: THEMES;
+    onToggle: () => void;
+  };
 }
 
 export default function Navigation(props: INavigation): JSX.Element {
-  const { viewMobileMenu, mobileBreakpoint, toggleMobileMenu } = props;
+  const { viewMobileMenu, mobileBreakpoint, toggleMobileMenu, theme } = props;
 
   const allMenuItems = NavigationItems.concat(SocialLinkItems);
   const navigationMenuItems = allMenuItems.map((item) => (
-    <MenuItem
+    <NavMenuItem
       key={item.href}
       href={item.href}
       title={item.title}
@@ -23,6 +29,12 @@ export default function Navigation(props: INavigation): JSX.Element {
       toggleMobileMenu={toggleMobileMenu}
     />
   ));
+
+  navigationMenuItems.push(
+    <StyledLi mobileBreakpoint={mobileBreakpoint}>
+      <ModeToggle theme={theme} />
+    </StyledLi>
+  );
 
   return (
     <>
