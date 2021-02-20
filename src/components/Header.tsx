@@ -10,12 +10,11 @@ import { THEMES } from "../styles/themes";
 
 const HeaderWrap = styled.header`
   background: ${({ theme }) => theme.colors.background};
-  width: 100%;
+  border: 1px solid ${({ theme }) => theme.colors.borders};
   height: 5rem;
   display: flex;
-  border: 1px solid ${({ theme }) => theme.colors.borders};
-  display: flex;
   justify-content: space-between;
+  align-items: center;
   z-index: 100;
 `;
 

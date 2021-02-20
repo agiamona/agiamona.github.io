@@ -38,6 +38,7 @@ library.add(
   faAngleRight,
   faAngleDoubleRight
 );
+
 const THEME_KEY = "THEME";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function App(props: RouteComponentProps): JSX.Element {

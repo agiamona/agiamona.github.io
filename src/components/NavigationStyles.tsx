@@ -11,8 +11,8 @@ export const Link = styled.a<{ mobileBreakpoint: string }>`
 
   ${(props) => props.mobileBreakpoint} {
     font-size: 2rem;
-    & ${this} svg {
-      font-size: 2rem;
+    > svg {
+      font-size: 3rem;
     }
   }
 `;
@@ -24,7 +24,9 @@ export const Menu = styled.ul`
 
 export const StyledLi = styled.li<{ mobileBreakpoint: string }>`
   padding-left: 1rem;
-  display: inline;
+  display: inline-block;
+  margin: auto;
+  vertical-align: middle;
   ${(props) => props.mobileBreakpoint} {
     display: block;
     width: 100%;
@@ -33,6 +35,10 @@ export const StyledLi = styled.li<{ mobileBreakpoint: string }>`
     margin: 0;
     border-top: 1px solid ${({ theme }) => theme.colors.borders};
     border-bottom: 1px solid ${({ theme }) => theme.colors.borders};
+
+    label {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -42,11 +48,8 @@ export interface INavigation {
 }
 
 export const StyledNav = styled.nav<INavigation>`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0.3em 1rem;
+  display: inline-block;
+  padding: 0.3rem 1rem;
 
   ${(props) => props.mobileBreakpoint} {
     display: ${(props) => (props.viewMobileMenu ? "block" : "none")};

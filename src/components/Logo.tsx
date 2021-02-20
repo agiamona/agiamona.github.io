@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledHeading = styled.h1`
+  display: inline-block;
   font-family: "Coda Caption", sans-serif;
   text-align: right;
   font-weight: bold;

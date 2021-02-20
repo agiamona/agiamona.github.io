@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background: ${({ theme }) => theme.colors.backgroundDominant}
-      url(${({ theme }) => theme.colors.bgImage}) no-repeat center center fixed;
+      url(${({ theme }) => theme.colors.bgImage}) no-repeat center top fixed;
     background-size: cover;
   }
 

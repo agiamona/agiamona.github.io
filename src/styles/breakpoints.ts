@@ -1,6 +1,6 @@
 export const maxPixels = {
   defaultNoMobile: 0,
-  mobileMenu: 755,
+  mobileMenu: 860,
   projectMobile: 700,
   projectMiniMobile: 420,
   landingMobile: 600,

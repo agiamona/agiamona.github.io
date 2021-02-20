@@ -31,7 +31,7 @@ export default function Navigation(props: INavigation): JSX.Element {
   ));
 
   navigationMenuItems.push(
-    <StyledLi mobileBreakpoint={mobileBreakpoint}>
+    <StyledLi mobileBreakpoint={mobileBreakpoint} key="toggle">
       <ModeToggle theme={theme} />
     </StyledLi>
   );

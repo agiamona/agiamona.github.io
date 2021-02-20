@@ -16,6 +16,7 @@ export const LightTheme = {
     borders: "#A9BABD",
     shodows: "#1a324a",
     landingImage: landingImageLightMode,
+    landingImagePosition: "center top",
     bgImage: bgImageLightMode,
     textOutline: "transparent",
     transparentSection: {
@@ -45,6 +46,7 @@ export const DarkTheme = {
     borders: "#121618",
     shodows: "#121618",
     landingImage: landingImageDarkMode,
+    landingImagePosition: "center center",
     bgImage: bgImageDarkMode,
     textOutline: "#121618",
     transparentSection: {

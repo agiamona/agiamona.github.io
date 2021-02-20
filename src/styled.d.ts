@@ -9,6 +9,7 @@ declare module "styled-components" {
       borders: string;
       shodows: string;
       landingImage: string;
+      landingImagePosition: string;
       bgImage: string;
       textOutline: string;
       transparentSection: {

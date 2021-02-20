@@ -2,7 +2,36 @@ import React from "react";
 import styled from "styled-components";
 import { THEMES } from "../styles/themes";
 
-const Toggle = styled.label``;
+const Toggle = styled.label`
+  border: 0.18rem solid ${({ theme }) => theme.colors.foreground};
+  border-radius: 8px;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  margin: auto;
+  display: inline-block;
+
+  > p {
+    position: relative;
+    left: -0.8rem;
+    font-weight: bold;
+    background-color: ${({ theme }) => theme.colors.foreground};
+    color: ${({ theme }) => theme.colors.background};
+    padding: 0.1rem 0.8rem;
+    border-radius: 6px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+
+  > input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  > input:checked + p {
+    left: 0.8rem;
+  }
+`;
 
 interface IModeToggle {
   theme: {
@@ -15,6 +44,8 @@ export default function ModeToggle(props: IModeToggle): JSX.Element {
     theme: { current, onToggle },
   } = props;
 
+  const toggleLabel = current === THEMES.DARK ? "Dark" : "Light";
+
   return (
     <Toggle htmlFor="modeToggle">
       <input
@@ -23,7 +54,7 @@ export default function ModeToggle(props: IModeToggle): JSX.Element {
         checked={current === THEMES.DARK}
         onChange={onToggle}
       />
-      Dark
+      <p>{toggleLabel}</p>
     </Toggle>
   );
 }
