@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { RouteComponentProps } from "@reach/router";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -41,7 +40,7 @@ library.add(
 
 const THEME_KEY = "THEME";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function App(props: RouteComponentProps): JSX.Element {
+export default function App(): JSX.Element {
   const [theme, setTheme] = useState(() => {
     let selectedTheme = THEMES.DARK;
 
