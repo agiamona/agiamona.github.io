@@ -5,14 +5,14 @@ import { THEMES } from "../styles/themes";
 const Toggle = styled.label`
   border: 0.18rem solid ${({ theme }) => theme.colors.foreground};
   border-radius: 8px;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem;
+  padding-right 1rem;
   cursor: pointer;
   margin: auto;
   display: inline-block;
 
   > p {
     position: relative;
-    left: -0.8rem;
     font-weight: bold;
     background-color: ${({ theme }) => theme.colors.foreground};
     color: ${({ theme }) => theme.colors.background};
@@ -23,6 +23,7 @@ const Toggle = styled.label`
   }
 
   > input {
+    position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
