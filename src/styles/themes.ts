@@ -53,7 +53,7 @@ export const DarkTheme = {
       heading: "#FEFBFB",
       borders: "#FEFBFB",
       button: {
-        text: "#121618",
+        text: "#FEFBFB",
         bg: "transparent",
       },
     },
