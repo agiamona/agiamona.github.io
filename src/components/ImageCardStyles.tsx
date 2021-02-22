@@ -123,7 +123,10 @@ export const Tagline = styled.p`
   min-height: 3rem;
 `;
 
-export const Thumbnail = styled.img<{ responsiveSize?: boolean }>`
+export const Thumbnail = styled.img<{ bg: string; responsiveSize?: boolean }>`
+  background: ${({ theme }) => theme.colors.background}
+    url(${(props) => props.bg}) no-repeat center center;
+  background-size: cover;
   border: solid 1px ${({ theme }) => theme.colors.borders};
   height: ${(props) => (props.responsiveSize ? "auto" : "9em")};
   width: ${(props) => (props.responsiveSize ? "90%" : "16em")};

@@ -12,20 +12,35 @@ import {
   faTimes,
   faAngleRight,
   faAngleDoubleRight,
+  faSpinner,
+  faCircleNotch,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/GlobalStyles";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Landing from "./components/sections/Landing";
+import Loading from "./components/Loading";
 import { THEMES, DarkTheme, LightTheme } from "./styles/themes";
 import data from "./assets/data.json";
-import AboutSection from "./components/sections/AboutSection";
-import SkillSection from "./components/sections/SkillSection";
-import ProjectSection from "./components/sections/ProjectSection";
-import ContactSection from "./components/sections/ContactSection";
-import Footer from "./components/Footer";
+
+const AboutSection = React.lazy(
+  () => import("./components/sections/AboutSection")
+);
+
+const SkillSection = React.lazy(
+  () => import("./components/sections/SkillSection")
+);
+
+const ProjectSection = React.lazy(
+  () => import("./components/sections/ProjectSection")
+);
+
+const ContactSection = React.lazy(
+  () => import("./components/sections/ContactSection")
+);
 
 library.add(
   faGithub,
@@ -35,11 +50,12 @@ library.add(
   faBars,
   faTimes,
   faAngleRight,
-  faAngleDoubleRight
+  faAngleDoubleRight,
+  faSpinner,
+  faCircleNotch
 );
 
 const THEME_KEY = "THEME";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function App(): JSX.Element {
   const [theme, setTheme] = useState(() => {
     let selectedTheme = THEMES.DARK;
@@ -65,10 +81,18 @@ export default function App(): JSX.Element {
       <Header theme={{ current: theme, onToggle: toggleTheme }} />
       <main>
         <Landing title={data.landing.title} subtitle={data.landing.subtitle} />
-        <AboutSection text={data.aboutMe} />
-        <SkillSection skills={data.skills} />
-        <ProjectSection projects={data.projects} />
-        <ContactSection contact={data.contact} />
+        <React.Suspense fallback={<Loading />}>
+          <AboutSection text={data.aboutMe} />
+        </React.Suspense>
+        <React.Suspense fallback={<Loading />}>
+          <SkillSection skills={data.skills} />
+        </React.Suspense>
+        <React.Suspense fallback="Loading...">
+          <ProjectSection projects={data.projects} />
+        </React.Suspense>
+        <React.Suspense fallback={<Loading />}>
+          <ContactSection contact={data.contact} />
+        </React.Suspense>
       </main>
       <Footer />
     </ThemeProvider>

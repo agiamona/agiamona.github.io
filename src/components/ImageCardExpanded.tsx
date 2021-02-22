@@ -31,6 +31,7 @@ export default function ImageCardExpanded(props: {
     detailsList,
     dates,
     tech,
+    placeholderThumbnail,
   } = project;
 
   const dateString = (): string => {
@@ -58,10 +59,12 @@ export default function ImageCardExpanded(props: {
       </CloseButton>
       <CardSubContainer centered>
         <Thumbnail
+          loading="lazy"
           alt={thumbnailAlt}
           src={thumbnail}
           height="144"
           width="256"
+          bg={placeholderThumbnail}
           responsiveSize
         />
         <LinksContainer mobile={breakpoints.projectMobile}>

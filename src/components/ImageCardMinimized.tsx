@@ -16,11 +16,24 @@ export default function ImageCardMinimized(props: {
   onClick: () => void;
 }): JSX.Element {
   const { project, onClick } = props;
-  const { title, tagline, thumbnail, thumbnailAlt } = project;
+  const {
+    title,
+    tagline,
+    thumbnail,
+    thumbnailAlt,
+    placeholderThumbnail,
+  } = project;
 
   return (
     <CardSubContainer>
-      <Thumbnail alt={thumbnailAlt} src={thumbnail} height="144" width="256" />
+      <Thumbnail
+        alt={thumbnailAlt}
+        loading="lazy"
+        src={thumbnail}
+        height="144"
+        width="256"
+        bg={placeholderThumbnail}
+      />
       <DetailsContainer>
         <Heading>{title}</Heading>
         <Tagline>{tagline}</Tagline>

@@ -5,7 +5,7 @@ import { THEMES } from "../styles/themes";
 const Toggle = styled.label`
   border: 0.18rem solid ${({ theme }) => theme.colors.foreground};
   border-radius: 8px;
-  padding: 0.2rem;
+  padding: 0.15rem;
   padding-right 1rem;
   cursor: pointer;
   margin: auto;

@@ -47,6 +47,7 @@ const LandingContainer = styled.section<{ mobile?: string }>`
   background: ${({ theme }) => theme.colors.backgroundDominant}
     url(${({ theme }) => theme.colors.landingImage}) no-repeat
     ${({ theme }) => theme.colors.landingImagePosition} fixed;
+  background-size: cover;
   min-height: 90vh;
   padding: 3em 0;
   text-align: center;

@@ -69,7 +69,8 @@
         "Independently complete tasks, conduct research, and learn new skills rapidly to ship high quality iterations while communicating with team consistently."
         ],
       "description": "Tutoria is a nonprofit that connects knowledge seekers with volunteer tutors that help them achieve their education goals. Clients and volunteers can sign up, set their availability, find and communicate with each other through the app.",
-      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613273897/Tutoria-screenshot_ociwqh.png",
+      "placeholderThumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_200,c_scale,e_blur:400/v1613273897/Tutoria-screenshot_ociwqh.png",
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_500,c_scale/v1613273897/Tutoria-screenshot_ociwqh.png",
       "thumbnailAlt": "Screenshot of Tutoria's web application",
       "liveSite": "http://tutoria.io",
       "dates": {
@@ -88,7 +89,8 @@
         "Implemented UI and data processing functionality in native Android app to enable data synchronization with the backend."
         ],
       "description": "Web and mobile applications for Wildlife Research team that featured user customizable forms for data collection in remote locations with no internet connection to allow research team to record and validate their data digitally in the field and synchronize it with central system when online.",
-      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613280296/FieldDay-screenshot_y0bsx9.png",
+      "placeholderThumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_200,c_scale,e_blur:400/v1613280296/FieldDay-screenshot_y0bsx9.png",
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_500,c_scale/v1613280296/FieldDay-screenshot_y0bsx9.png",
       "thumbnailAlt": "Image of the FieldDay applications",
       "dates": {
         "start": "Sep 2018",
@@ -105,7 +107,8 @@
         "Uses Modern React practices (including Hooks and functional components)"
       ],
       "description": "This portfolio was created using modern frontend technology to create a digital portfolio that is extendable and easily adaptable in the future.",
-      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613283786/portfolio-screenshot_eurl8s.png",
+      "placeholderThumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_200,c_scale,e_blur:400/v1613283786/portfolio-screenshot_eurl8s.png",
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_500,c_scale/v1613283786/portfolio-screenshot_eurl8s.png",
       "thumbnailAlt": "Screenshot of this portfolio page",
       "liveSite": "https://agiamona.github.io/",
       "sourceCode": "https://github.com/agiamona/agiamona.github.io"
@@ -119,7 +122,8 @@
         "Applied responsive design principles to create positive user experiences across desktop and mobile devices."
       ],
       "description": "Converted list of business needs to technical requirements, which were then implemented as a React prototype to allow users to register, browse, and signup for services.",
-      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613281830/Community_Helper_-_screenshot_loyb7a.png",
+      "placeholderThumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_200,c_scale,e_blur:400/v1613281830/Community_Helper_-_screenshot_loyb7a.png",
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_500,c_scale/v1613281830/Community_Helper_-_screenshot_loyb7a.png",
       "thumbnailAlt": "Screenshot of Community Helper's homepage",
       "liveSite": "https://agiamona.github.io/community-helper/",
       "sourceCode": "https://github.com/agiamona/community-helper"
@@ -133,7 +137,8 @@
         "Utilized parallax scrolling effect to provide a more engaging experience."
       ],
       "description": "A description of project C. What the problem was and how it was solved.",
-      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/v1613281340/chihuahua-enthusiast-screenshot_qi46oy.png",
+      "placeholderThumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_200,c_scale,e_blur:400/v1613281340/chihuahua-enthusiast-screenshot_qi46oy.png",
+      "thumbnail": "https://res.cloudinary.com/dgrosspgy/image/upload/w_500,c_scale/v1613281340/chihuahua-enthusiast-screenshot_qi46oy.png",
       "thumbnailAlt": "Screenshot of Chihuahua Enthusiast Homepage",
       "liveSite": "https://agiamona.github.io/chihuahua-enthusiast/",
       "sourceCode": "https://github.com/agiamona/chihuahua-enthusiast"

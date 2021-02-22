@@ -1,7 +1,13 @@
 import React from "react";
 import Section from "../SectionComponent";
-import { SubSectionContainer } from "../SectionStyles";
 import SkillCard from "../ListCard";
+import Loading from "../Loading";
+
+const SubSectionContainers = React.lazy(() =>
+  import("../SectionStyles").then(({ SubSectionContainer }) => ({
+    default: SubSectionContainer,
+  }))
+);
 
 interface ISkill {
   category: string;
@@ -16,7 +22,9 @@ export default function SkillSection(props: { skills: ISkill[] }): JSX.Element {
 
   return (
     <Section title="Skills" id="skills" transparent>
-      <SubSectionContainer>{skillCards}</SubSectionContainer>
+      <React.Suspense fallback={<Loading />}>
+        <SubSectionContainers>{skillCards}</SubSectionContainers>
+      </React.Suspense>
     </Section>
   );
 }

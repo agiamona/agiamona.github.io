@@ -4,6 +4,7 @@ export default interface IProject {
   detailsList: string[];
   description: string;
   tech: string;
+  placeholderThumbnail: string;
   thumbnail: string;
   thumbnailAlt: string;
   liveSite?: string;

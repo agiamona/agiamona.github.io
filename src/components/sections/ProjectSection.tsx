@@ -1,24 +1,20 @@
 import React from "react";
 import Section from "../SectionComponent";
-import ImageCard from "../ImageCard";
-import { SubSectionContainer } from "../SectionStyles";
-
 import IProject from "../IProject";
+import Loading from "../Loading";
+
+const ProjectList = React.lazy(() => import("../ProjectList"));
 
 export default function ProjectSection(props: {
   projects: IProject[];
 }): JSX.Element {
   const { projects } = props;
 
-  const projectCards = projects.map(
-    (project: IProject): JSX.Element => (
-      <ImageCard project={project} key={project.title} />
-    )
-  );
-
   return (
     <Section title="Projects" id="projects">
-      <SubSectionContainer>{projectCards}</SubSectionContainer>
+      <React.Suspense fallback={<Loading />}>
+        <ProjectList projects={projects} />
+      </React.Suspense>
     </Section>
   );
 }
