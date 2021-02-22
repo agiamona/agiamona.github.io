@@ -1,19 +1,29 @@
 {
   "files": {
-    "main.js": "/static/js/main.57cd5397.chunk.js",
-    "main.js.map": "/static/js/main.57cd5397.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2fd7dc15.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2fd7dc15.js.map",
-    "static/js/2.d4b469ed.chunk.js": "/static/js/2.d4b469ed.chunk.js",
-    "static/js/2.d4b469ed.chunk.js.map": "/static/js/2.d4b469ed.chunk.js.map",
+    "main.js": "/static/js/main.fe3a28dd.chunk.js",
+    "main.js.map": "/static/js/main.fe3a28dd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0e3d9f7f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0e3d9f7f.js.map",
+    "static/js/2.bedd1ceb.chunk.js": "/static/js/2.bedd1ceb.chunk.js",
+    "static/js/2.bedd1ceb.chunk.js.map": "/static/js/2.bedd1ceb.chunk.js.map",
+    "static/js/3.4ba97b14.chunk.js": "/static/js/3.4ba97b14.chunk.js",
+    "static/js/3.4ba97b14.chunk.js.map": "/static/js/3.4ba97b14.chunk.js.map",
+    "static/js/4.7d103772.chunk.js": "/static/js/4.7d103772.chunk.js",
+    "static/js/4.7d103772.chunk.js.map": "/static/js/4.7d103772.chunk.js.map",
+    "static/js/5.0bc2f034.chunk.js": "/static/js/5.0bc2f034.chunk.js",
+    "static/js/5.0bc2f034.chunk.js.map": "/static/js/5.0bc2f034.chunk.js.map",
+    "static/js/6.aefb26ee.chunk.js": "/static/js/6.aefb26ee.chunk.js",
+    "static/js/6.aefb26ee.chunk.js.map": "/static/js/6.aefb26ee.chunk.js.map",
+    "static/js/7.00aabab4.chunk.js": "/static/js/7.00aabab4.chunk.js",
+    "static/js/7.00aabab4.chunk.js.map": "/static/js/7.00aabab4.chunk.js.map",
+    "static/js/8.f3b2e165.chunk.js": "/static/js/8.f3b2e165.chunk.js",
+    "static/js/8.f3b2e165.chunk.js.map": "/static/js/8.f3b2e165.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.d4b469ed.chunk.js.LICENSE.txt": "/static/js/2.d4b469ed.chunk.js.LICENSE.txt",
-    "static/media/LandingPageBG.0ed60e6b.jpg": "/static/media/LandingPageBG.0ed60e6b.jpg",
-    "static/media/milky_way_bg.e4b01fa3.jpg": "/static/media/milky_way_bg.e4b01fa3.jpg"
+    "static/js/2.bedd1ceb.chunk.js.LICENSE.txt": "/static/js/2.bedd1ceb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2fd7dc15.js",
-    "static/js/2.d4b469ed.chunk.js",
-    "static/js/main.57cd5397.chunk.js"
+    "static/js/runtime-main.0e3d9f7f.js",
+    "static/js/2.bedd1ceb.chunk.js",
+    "static/js/main.fe3a28dd.chunk.js"
   ]
 }
