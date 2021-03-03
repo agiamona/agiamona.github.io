@@ -18,6 +18,10 @@ const Input = styled.input`
   padding: 0.5rem;
   font-family: "Roboto Slab", Arial, sans-serif;
   border-radius: 5px;
+
+  ::placeholder {
+    color: #767e80;
+  }
 `;
 
 const SubmitButton = styled.input`
@@ -51,6 +55,10 @@ const TextArea = styled.textarea`
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.colors.borders};
   border-radius: 5px;
+
+  ::placeholder {
+    color: #767e80;
+  }
 `;
 
 type InputChangeType = React.ChangeEvent<HTMLInputElement>;

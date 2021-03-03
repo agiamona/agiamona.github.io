@@ -87,7 +87,7 @@ export default function App(): JSX.Element {
         <React.Suspense fallback={<Loading />}>
           <SkillSection skills={data.skills} />
         </React.Suspense>
-        <React.Suspense fallback="Loading...">
+        <React.Suspense fallback={<Loading />}>
           <ProjectSection projects={data.projects} />
         </React.Suspense>
         <React.Suspense fallback={<Loading />}>

@@ -4,7 +4,7 @@ import { breakpoints } from "../../styles/breakpoints";
 import Section from "../SectionComponent";
 
 const StyledText = styled.p<{ mobile?: string }>`
-  text-align: center;
+  text-align: left;
   width: 60%;
   padding-bottom: 1rem;
   margin: auto;
